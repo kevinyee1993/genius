@@ -14,9 +14,7 @@ const sessionReducer = (state = _nullUser, action) => {
       const currentUser = action.currentUser;
       return merge({}, { currentUser });
     default:
-      //return state;
-      //doing this bottom return just for testing
-      return {type: action.type, body: action.currentUser};
+      return state;
   }
 };
 
