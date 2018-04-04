@@ -42,14 +42,14 @@ render() {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          FORMS ARE WORKING!!!
+          FORMS ARE WORKING CHANGE THIS TO A MODAL THOUGH!!! I AM SESSION_FORM.JS
           <br/>
           Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
           <div className="login-form">
             <br/>
             <label>Username:
-              <input type="text"
+                <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"

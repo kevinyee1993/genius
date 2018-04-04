@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFE7D;
+  height: 41px;
+}
+
+.searchbar {
+  background-color: white;
+  width: 180px;
+  border: 0;
+  padding: .4rem 2rem .3rem .5rem;
+  position: relative;
+  height: 20px;
+  margin: 5px 10px 10px 5px;
+  cursor: text;
+}
+
+.login-signup {
+  font-size: .75em;
+  cursor: pointer;
+}
+
+.login-signup > a {
+  text-decoration: none;
+}
