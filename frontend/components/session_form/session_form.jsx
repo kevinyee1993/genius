@@ -39,35 +39,53 @@ renderErrors() {
 
 //TODO: CHANGE THIS TO LOOK LIKE GENIUS
 render() {
+
+    $("body").on("click", ".js-modal-open", function(event){
+      event.preventDefault();
+      $(".modal").addClass("is-open");
+    });
+
+    $("body").on("click", ".js-modal-close", function(event){
+      event.preventDefault();
+      $(".modal").removeClass("is-open");
+    });
+
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          FORMS ARE WORKING CHANGE THIS TO A MODAL THOUGH!!! I AM SESSION_FORM.JS
-          <br/>
-          Please {this.props.formType} or {this.props.navLink}
-          {this.renderErrors()}
-          <div className="login-form">
+
+    <div class="modal">
+
+      <div class="modal-screen js-modal-close">
+        <div className="login-form-container">
+          <form onSubmit={this.handleSubmit} className="login-form-box">
+
+            FORMS ARE WORKING CHANGE THIS TO A MODAL THOUGH!!! I AM SESSION_FORM.JS
             <br/>
-            <label>Username:
-                <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
-          </div>
-        </form>
+            Please {this.props.formType} or {this.props.navLink}
+            {this.renderErrors()}
+            <div className="login-form">
+              <br/>
+              <label>Username:
+                  <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="login-input"
+                />
+              </label>
+              <br/>
+              <label>Password:
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="login-input"
+                />
+              </label>
+              <br/>
+              <input className="session-submit" type="submit" value={this.props.formType} />
+            </div>
+          </form>
+        </div>
       </div>
+    </div>
     );
   }
 }
