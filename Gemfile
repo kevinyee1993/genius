@@ -52,6 +52,7 @@ group :development do
   gem 'annotate'
   gem 'bcrypt'
   gem 'jquery-rails'
+  gem 'font-awesome-sass'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

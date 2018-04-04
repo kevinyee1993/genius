@@ -9,6 +9,7 @@ import { Route } from 'react-router-dom';
 const App = () => (
   <div>
     <header>
+
       <p class="searchbar">Search lyrics & more</p>
       <p class="logo">I am the app component</p>
       <GreetingContainer />

@@ -37,3 +37,12 @@
   line-height: 1;
   cursor: pointer;
 }
+
+.modal-close-x {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: lighter;
+}

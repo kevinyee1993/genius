@@ -54,11 +54,13 @@ render() {
 
     <div class="modal">
 
-      <div class="modal-screen js-modal-close">
+      <div class="modal-screen js-modal-close"></div>
+        <p class="modal-close-x js-modal-close">&times;</p>
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
 
-            FORMS ARE WORKING CHANGE THIS TO A MODAL THOUGH!!! I AM SESSION_FORM.JS
+            FORMS ARE WORKING!!! I AM SESSION_FORM.JS {this.props.formType}
+            
             <br/>
             Please {this.props.formType} or {this.props.navLink}
             {this.renderErrors()}
@@ -84,7 +86,7 @@ render() {
             </div>
           </form>
         </div>
-      </div>
+
     </div>
     );
   }
