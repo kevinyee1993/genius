@@ -4,8 +4,6 @@ import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 
 const _nullUser = Object.freeze({ currentUser: null });
 
-
-//ACTION MAY NOT BE GETTING PASSED INTO THE REDUCER?!?!?!?!
 const sessionReducer = (state = _nullUser, action) => {
   Object.freeze(state);
 
@@ -19,7 +17,3 @@ const sessionReducer = (state = _nullUser, action) => {
 };
 
 export default sessionReducer;
-
-//store dispatches action
-//reducers get it
-//depending on type of action, they return a different object as the state

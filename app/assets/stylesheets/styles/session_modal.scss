@@ -1,48 +1,19 @@
-.login-form-container {
-  background-color: lightblue;
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  margin-left: -220px;
-  width: 360px;
-  padding: 20px;
-  background: #E9E9E9;
-  z-index: 3;
-  border: 1px solid #000;
-}
-
-.modal {
-  display: none;
-}
-
-.modal-screen {
+.modal-background {
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
   right: 0;
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.8);
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
 }
 
-.modal.is-open {
-  display: block;
-}
-
-.modal-close {
+.modal-child {
   position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 36px;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.modal-close-x {
-  color: #FFFFFF;
-  display: flex;
-  justify-content: flex-end;
-  cursor: pointer;
-  font-size: 30px;
-  font-weight: lighter;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #E9E9E9;
+  width: 450px;
+  height: 295px;
 }
