@@ -1,7 +1,7 @@
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #FFFE7D;
+  background-color: #FFFF64;
   height: 41px;
 }
 
@@ -19,8 +19,13 @@ header {
 .login-signup {
   font-size: .75em;
   cursor: pointer;
+  display: flex;
 }
 
 .login-signup > a {
   text-decoration: none;
+}
+
+.logo {
+  margin: 10px;
 }

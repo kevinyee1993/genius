@@ -49,7 +49,9 @@ render() {
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
 
-            I AM SESSION_FORM.JS {this.props.formType}
+            <div class="session-form-heading">
+              <p>{this.props.formType} TO CONVOGENIUS</p>
+            </div>
 
             <br/>
 
