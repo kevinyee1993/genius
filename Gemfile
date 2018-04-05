@@ -53,6 +53,7 @@ group :development do
   gem 'annotate'
   gem 'bcrypt'
   gem 'font-awesome-sass'
+  gem 'faker'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
