@@ -10,12 +10,12 @@
 
 .modal-child {
     position: absolute;
-    top: 35%;
+    top: 227px;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #E9E9E9;
     width: 450px;
-    height: 466.5px;
+    height: 424.5px;
 }
 
 button {
@@ -35,15 +35,32 @@ button:hover {
 }
 
 .session-form-heading {
-  color: #9AA8E9;
-  text-transform: uppercase;
-  border-bottom: 1px solid #9AA8E9;
-  padding: 5px;
-  margin: 0px 20px 20px 20px;
+    color: #9AA8E9;
+    text-transform: uppercase;
+    border-bottom: 2px solid #9AA8E9;
+    padding: 5px;
+    margin: 0px 20px 20px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 20px;
+}
+
+.login-form {
+  margin: 20px;
 }
 
 .login-input {
   width: 400px;
+  border: 2px solid #CCCCCC;
+  height: 25px;
+}
+
+.session-submit {
+  background-color: inherit;
+  border: 2px solid black;
+  padding: 5px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .error-messages {
