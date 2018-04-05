@@ -78,7 +78,7 @@ render() {
                   />
                 </label>
               </section>
-              
+
               <br/>
               <input className="session-submit" type="submit" value={this.props.formType} />
             </div>
@@ -89,6 +89,7 @@ render() {
     );
   }
 }
+
 
 
 export default withRouter(SessionForm);
