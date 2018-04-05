@@ -1,0 +1,14 @@
+.navbar {
+  background-color: black;
+  color: white;
+  height: 46px;
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 5px 10px 10px 10px;
+  font-weight: lighter;
+}

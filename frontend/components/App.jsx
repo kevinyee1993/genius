@@ -5,6 +5,9 @@ import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
 
+//dummy components for now
+import Navbar from './navbar/navbar';
+
 import { Route } from 'react-router-dom';
 
 const App = () => (
@@ -19,6 +22,7 @@ const App = () => (
       <GreetingContainer />
     </header>
 
+    <Navbar />
   </div>
 );
 
