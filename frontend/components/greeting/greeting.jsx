@@ -2,7 +2,9 @@ import React from 'react';
 
 import login from '../../actions/session_actions';
 
-const Greeting = ({ currentUser, logout, openModal, demoLogin }) => {
+
+//new thing is clearErrors that I added into these args
+const Greeting = ({ currentUser, logout, openModal, demoLogin, clearErrors }) => {
 
   const sessionLinks = () => (
     <nav className="login-signup">

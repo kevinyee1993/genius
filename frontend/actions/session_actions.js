@@ -35,16 +35,10 @@ export const logout = () => dispatch => (
   ))
 );
 
-//just testing a remove errors thunk action creator here
-//doesn't take anything, just changes the state to en empty object
-//should this be an array though? or just an object,
-//trying out empty object first, if error will have to change to
-//some array thing
-//maybe have this action called in modal.jsx whenever you exit the modal??
-//yeah getting errors, need to make sure what this object actually looks like
-
 //OK GOT THIS WORKING NOW JUST NEED TO CALL IT IN THE RIGHT PLACE
 //AKA AFTER YOU EXIT A MODAL
+//need to dispatch this action to have it work correctly
+//how to dispatch when calling it in other things?
 export const clearErrors = () => dispatch => (
   dispatch(receiveErrors([]))
 );
