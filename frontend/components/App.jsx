@@ -18,7 +18,7 @@ const App = () => (
       <p class="logo">I am the app component</p>
       <GreetingContainer />
     </header>
-    
+
   </div>
 );
 

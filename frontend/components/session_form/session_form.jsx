@@ -40,30 +40,21 @@ renderErrors() {
 //TODO: CHANGE THIS TO LOOK LIKE GENIUS
 render() {
 
-    $("body").on("click", ".js-modal-open", function(event){
-      event.preventDefault();
-      $(".modal").addClass("is-open");
-    });
-
-    $("body").on("click", ".js-modal-close", function(event){
-      event.preventDefault();
-      $(".modal").removeClass("is-open");
-    });
-
     return (
 
     <div class="modal">
 
-      <div class="modal-screen js-modal-close"></div>
-        <p class="modal-close-x js-modal-close">&times;</p>
+        <p class="modal-close-x">&times;</p>
+
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
 
-            FORMS ARE WORKING!!! I AM SESSION_FORM.JS {this.props.formType}
-            
+            I AM SESSION_FORM.JS {this.props.formType}
+
             <br/>
-            Please {this.props.formType} or {this.props.navLink}
-            {this.renderErrors()}
+
+            <p class="error-messages">{this.renderErrors()}</p>
+
             <div className="login-form">
               <br/>
               <label>Username:

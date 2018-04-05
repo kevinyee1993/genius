@@ -1,14 +1,17 @@
 import React from 'react';
 
-const Greeting = ({ currentUser, logout, openModal }) => {
+import login from '../../actions/session_actions';
+
+const Greeting = ({ currentUser, logout, openModal, demoLogin }) => {
 
   const sessionLinks = () => (
     <nav className="login-signup">
       <button onClick={() => openModal('login')}>Login</button>
-      &nbsp;or&nbsp;
       <button onClick={() => openModal('signup')}>Signup</button>
+      <button onClick={demoLogin}>Demo</button>
     </nav>
   );
+
   const personalGreeting = () => (
     <hgroup className="header-group">
       <h2 className="header-name">Hi, {currentUser.username}!</h2>
