@@ -19,7 +19,9 @@ function Modal({modal, closeModal}) {
     default:
       return null;
   }
-  
+
+  //to add more than one function to an event it's: 
+  //onClick = "doSomething();doSomethingElse();"
 
   return (
     <div className="modal-background" onClick={closeModal}>

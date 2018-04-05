@@ -4,7 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 //just testing this
-import { login } from './actions/session_actions';
+import { login, clearErrors } from './actions/session_actions';
 import { receiveCurrentUser } from './actions/session_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //TESTS
   window.login = login;
+  window.clearErrors = clearErrors;
 
   window.receiveCurrentUser = receiveCurrentUser;
   window.getState = store.getState;
