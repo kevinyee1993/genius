@@ -19,6 +19,8 @@ export const receiveErrors = errors => ({
   errors
 });
 
+//implement this later because users do not need to create the tracks yet
+//maybe just seed it for now and give them the functionality for it later
 export const createTrack = (track) => dispatch => (
   APIUtil.createTrack(track).then(track => (
     dispatch(receiveSingleTrack(track))
