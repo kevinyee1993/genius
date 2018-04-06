@@ -13,7 +13,7 @@ const trackReducer = (state = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_ALL_TRACKS:
-      return merge({}, state, action.tracks);
+      return merge({}, action.tracks);
     case RECEIVE_SINGLE_TRACK:
       return merge({}, state, {[action.track.id]: action.track});
     default:

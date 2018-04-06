@@ -5,9 +5,9 @@ import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
 
-//NEED TO MAKE ROUTES TO SHOW TRACK CONTAINER OR WHATEVER FEEL ME
-import TrackShowContainer from './tracks/track_show_container';
-// import TrackShow from './tracks/track_show';
+//test begin!
+import TrackIndexContainer from './tracks/track_index_container';
+//test end!
 
 //dummy components for now
 import Navbar from './navbar/navbar';
@@ -16,7 +16,6 @@ import Navbar from './navbar/navbar';
 import { Route } from 'react-router-dom';
 
 
-//need to add route here to show the TrackIndexContainer
 const App = () => (
   <div>
 
@@ -31,7 +30,7 @@ const App = () => (
 
     <Navbar />
 
-    <TrackShowContainer />
+    <TrackIndexContainer />
   </div>
 );
 

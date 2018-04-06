@@ -29,7 +29,7 @@ renderErrors() {
   return(
     <ul>
       { this.props.errors.map((error, i) => (
-        <li key={`error-${i}`}>
+        <li key={`error-${i}`} className="error-messages">
           { error }
         </li>
       ))}
@@ -52,7 +52,7 @@ render() {
 
             <br/>
 
-            <p class="error-messages">{this.renderErrors()}</p>
+            {this.renderErrors()}
 
             <div className="login-form">
               <br/>
