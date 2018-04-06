@@ -7,7 +7,7 @@ import Root from './components/root';
 import { login, clearErrors } from './actions/session_actions';
 import { receiveCurrentUser } from './actions/session_actions';
 import { createTrack, fetchAllTracks, fetchSingleTrack } from './util/track_api_util';
-import { receiveSingleTrack } from './actions/track_actions';
+import { receiveSingleTrack, receiveAllTracks } from './actions/track_actions';
 //end of testing imports
 
 
@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //action tests
       window.receiveSingleTrack = receiveSingleTrack;
+      window.receiveAllTracks = receiveAllTracks;
 
 //END TESTS
 

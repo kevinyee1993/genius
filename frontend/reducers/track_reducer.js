@@ -1,6 +1,6 @@
 import merge from 'lodash/merge';
 
-import { RECEIVE_SINGLE_TRACK } from '../actions/track_actions';
+import { RECEIVE_SINGLE_TRACK, RECEIVE_ALL_TRACKS } from '../actions/track_actions';
 
 //Might need to change the default state after, just leaving it as {} for now
 
@@ -12,6 +12,8 @@ const trackReducer = (state = {}, action) => {
   Object.freeze(state);
 
   switch(action.type) {
+    case RECEIVE_ALL_TRACKS:
+      return merge({}, state, action.tracks);
     case RECEIVE_SINGLE_TRACK:
       return merge({}, state, {[action.track.id]: action.track});
     default:
