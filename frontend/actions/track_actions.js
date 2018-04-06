@@ -4,9 +4,9 @@ export const RECEIVE_SINGLE_TRACK = 'RECEIVE_SINGLE_TRACK';
 export const RECEIVE_ALL_TRACKS = 'RECEIVE_ALL_TRACKS';
 export const RECEIVE_TRACK_ERRORS = 'RECEIVE_TRACK_ERRORS';
 
-export const receiveSingleTrack = (singleTrack) => ({
+export const receiveSingleTrack = (track) => ({
   type: RECEIVE_SINGLE_TRACK,
-  singleTrack
+  track
 });
 
 export const receiveAllTracks = (tracks) => ({

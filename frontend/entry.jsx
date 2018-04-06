@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //TESTS
     //creating store
+      window.getState = store.getState;
       window.dispatch = store.dispatch;
 
     //api util tests
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //action tests
       window.receiveSingleTrack = receiveSingleTrack;
-      
+
 //END TESTS
 
 
