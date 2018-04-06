@@ -10,25 +10,30 @@ class TrackIndex extends React.Component {
     this.props.fetchAllTracks();
   }
 
+
+  //add this image stuff in later!! then have to style it too
+  // <img src="https://s.abcnews.com/images/Lifestyle/puppy-ht-3-er-170907_4x3_992.jpg"></img>
+
   render() {
     const tracks = this.props.tracks.map(track => {
       return (
-        <div>
+        <section class="track-index-item">
 
-          <p>
+          <p class="track-number">
             {track.id}
           </p>
 
-          <p>
-            {track.title}
-          </p>
+          <section class="title-and-artist">
+            <p class="track-title">
+              {track.title}
+            </p>
 
-          <p>
-            {track.artist}
-          </p>
-          <img src="https://s.abcnews.com/images/Lifestyle/puppy-ht-3-er-170907_4x3_992.jpg"></img>
+            <p class="track-artist">
+              {track.artist}
+            </p>
+        </section>
 
-        </div>
+        </section>
       );
     });
 

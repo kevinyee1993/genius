@@ -1,0 +1,36 @@
+.track-index-item {
+  margin: 10px;
+  display: flex;
+  border-bottom: 1px solid #CCCCCC;
+  padding: 10px;
+}
+
+.track-number {
+  margin: 0 10px 0 0;
+}
+
+.track-index-item .track-number {
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 10px 13px;
+}
+
+
+
+
+.track-index-item:nth-child(-n+3) .track-number {
+  border: 2px solid black;
+}
+
+
+.track-index-item:nth-child(-n+3) .track-title{
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+
+.track-index-item:nth-child(-n+3) .track-artist{
+  font-size: 0.9em;
+  font-weight: 500;
+}
