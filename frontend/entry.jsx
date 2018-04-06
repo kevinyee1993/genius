@@ -6,6 +6,7 @@ import Root from './components/root';
 //just testing this
 import { login, clearErrors } from './actions/session_actions';
 import { receiveCurrentUser } from './actions/session_actions';
+import { createTrack, fetchAllTracks, fetchSingleTrack } from './util/track_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -20,13 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 //TESTS
-  window.login = login;
-  window.clearErrors = clearErrors;
+window.createTrack = createTrack;
+window.fetchAllTracks = fetchAllTracks;
+window.fetchSingleTrack = fetchSingleTrack;
 
-  window.receiveCurrentUser = receiveCurrentUser;
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
 //END TESTS
-
   ReactDOM.render(<Root store={ store }/>, root);
 });
