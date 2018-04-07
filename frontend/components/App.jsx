@@ -1,4 +1,6 @@
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+
 import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
@@ -7,13 +9,12 @@ import Modal from './modal/modal';
 
 //test begin!
 import TrackIndexContainer from './tracks/track_index_container';
+import TrackShowContainer from './tracks/track_show_container';
 //test end!
 
 //dummy components for now
 import Navbar from './navbar/navbar';
 //end of dummy components
-
-import { Route } from 'react-router-dom';
 
 
 const App = () => (
@@ -30,7 +31,11 @@ const App = () => (
 
     <Navbar />
 
-    <TrackIndexContainer />
+    <Switch>
+      <Route path="/tracks/:trackId" component={ TrackShowContainer } />
+      <Route path="/" component={ TrackIndexContainer } />
+    </Switch>
+
   </div>
 );
 

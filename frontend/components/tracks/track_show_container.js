@@ -2,11 +2,11 @@ import { connect } from 'react-redux';
 import TrackShow from './track_show';
 import { fetchSingleTrack, fetchAllTracks } from '../../actions/track_actions';
 
-// track: state.entities.tracks[ownProps.match.params.trackId],
 // state,
 // track: state.entities.tracks[1]
+// track: state.entities.tracks
 const mapStateToProps = (state, ownProps) => ({
-  track: state.entities.tracks
+  track: state.entities.tracks[ownProps.match.params.trackId],
 });
 
 const mapDispatchToProps = dispatch => ({

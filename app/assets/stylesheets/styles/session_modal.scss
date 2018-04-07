@@ -18,22 +18,6 @@
     height: 424.5px;
 }
 
-button {
-     background:none;
-     border: none;
-     cursor: pointer;
-     font-size: 13px;
-     border-bottom: 7px solid transparent;
-}
-
-button:hover {
-  border-bottom: 7px solid #ff1464;
-  transition-property: border-bottom;
-  transition-duration: 0.1s;
-  transition-timing-function: initial;
-  transition-delay: initial;
-}
-
 .session-form-heading {
     color: #9AA8E9;
     text-transform: uppercase;
