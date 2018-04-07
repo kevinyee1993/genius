@@ -46,7 +46,7 @@ render() {
         <div className="login-form-container">
           <form onSubmit={this.handleSubmit} className="login-form-box">
 
-            <div class="session-form-heading">
+            <div className="session-form-heading">
               <p>{this.props.formType} TO CONVOGENIUS</p>
             </div>
 
@@ -57,7 +57,7 @@ render() {
             <div className="login-form">
               <br/>
 
-              <section class="input-body">
+              <section className="input-body">
                 <label>Username:
                     <input type="text"
                     value={this.state.username}
@@ -69,7 +69,7 @@ render() {
 
               <br/>
 
-              <section class="input-body">
+              <section className="input-body">
                 <label>Password:
                   <input type="password"
                     value={this.state.password}

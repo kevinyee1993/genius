@@ -5,7 +5,7 @@ class Navbar extends React.Component {
   render() {
     return(
       <div class="navbar">
-        <section class="navbar-items">
+        <section className="navbar-items">
           <p>Dummy Text</p>
           <p>Fullstack project</p>
           <p>Go kev!!!</p>

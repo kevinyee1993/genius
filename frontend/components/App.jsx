@@ -22,12 +22,12 @@ const App = () => (
 
     <Modal />
 
-    <header>
+    <header className="main-header">
 
-      <p class="searchbar">Search lyrics & more</p>
+      <p className="searchbar">Search lyrics & more</p>
 
       <Link to={`/`}>
-        <p class="logo">I am the app component</p>
+        <p className="logo">I am the app component</p>
       </Link>
 
       <GreetingContainer />

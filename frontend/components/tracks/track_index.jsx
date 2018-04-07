@@ -20,18 +20,18 @@ class TrackIndex extends React.Component {
       return (
 
         <Link to={`/tracks/${track.id}`}>
-        <section class="track-index-item">
+        <section className="track-index-item">
 
-              <p class="track-number">
+              <p className="track-number">
                 {track.id}
               </p>
 
-              <section class="title-and-artist">
-                <p class="track-title small-title">
+              <section className="title-and-artist">
+                <p className="track-title small-title">
                   {track.title}
                 </p>
 
-                <p class="track-artist small-artist">
+                <p className="track-artist small-artist">
                   {track.artist}
                 </p>
             </section>
