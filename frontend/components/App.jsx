@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 
 import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container';
@@ -25,7 +25,11 @@ const App = () => (
     <header>
 
       <p class="searchbar">Search lyrics & more</p>
-      <p class="logo">I am the app component</p>
+
+      <Link to={`/`}>
+        <p class="logo">I am the app component</p>
+      </Link>
+
       <GreetingContainer />
     </header>
 

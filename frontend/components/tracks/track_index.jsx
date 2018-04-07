@@ -19,24 +19,24 @@ class TrackIndex extends React.Component {
     const tracks = this.props.tracks.map(track => {
       return (
 
-        <Link to={`/tracks/${track.id}`}>
-          <section class="track-index-item">
+        <section class="track-index-item">
+          <Link to={`/tracks/${track.id}`}>
 
-            <p class="track-number">
-              {track.id}
-            </p>
-
-            <section class="title-and-artist">
-              <p class="track-title small-title">
-                {track.title}
+              <p class="track-number">
+                {track.id}
               </p>
 
-              <p class="track-artist small-artist">
-                {track.artist}
-              </p>
-          </section>
-        </section>
-      </Link>
+              <section class="title-and-artist">
+                <p class="track-title small-title">
+                  {track.title}
+                </p>
+
+                <p class="track-artist small-artist">
+                  {track.artist}
+                </p>
+            </section>
+          </Link>
+      </section>
 
       );
     });

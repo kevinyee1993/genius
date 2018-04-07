@@ -8,10 +8,6 @@
   color: black;
 }
 
-//gets rid of the underline after making the entire section a link
-a {
-  text-decoration: none;
-}
 
 .track-index-item:hover {
   background-color: #E9E9E9;
@@ -47,7 +43,6 @@ a {
 
 .track-index-item:nth-child(n+4) .title-and-artist {
   display: flex;
-
 }
 
 //trash code fix
@@ -59,4 +54,11 @@ a {
 .track-index-item:nth-child(n+4) .small-artist:before {
   content: "y ";
   text-transform: lowercase;
+}
+
+//gets rid of the underline after making the entire section a link
+a {
+  text-decoration: none;
+  color: black;
+  display: flex;
 }
