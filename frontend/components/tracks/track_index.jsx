@@ -19,8 +19,8 @@ class TrackIndex extends React.Component {
     const tracks = this.props.tracks.map(track => {
       return (
 
+        <Link to={`/tracks/${track.id}`}>
         <section class="track-index-item">
-          <Link to={`/tracks/${track.id}`}>
 
               <p class="track-number">
                 {track.id}
@@ -35,8 +35,8 @@ class TrackIndex extends React.Component {
                   {track.artist}
                 </p>
             </section>
-          </Link>
       </section>
+    </Link>
 
       );
     });

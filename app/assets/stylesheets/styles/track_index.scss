@@ -8,7 +8,6 @@
   color: black;
 }
 
-
 .track-index-item:hover {
   background-color: #E9E9E9;
   transition: background-color .25s ease;
@@ -24,41 +23,41 @@
   padding: 10px 13px;
 }
 
-.track-index-item:nth-child(-n+3) .track-number {
+//gets rid of the underline after making the entire section a link
+a {
+  text-decoration: none;
+//   color: black;
+//   display: flex;
+}
+
+a:nth-child(-n+3) .track-index-item .track-number {
   border: 2px solid black;
 }
 
 
-.track-index-item:nth-child(-n+3) .track-title{
+a:nth-child(-n+3) .track-index-item .track-title{
   font-size: 1.5em;
   font-weight: 700;
   // margin-bottom: 3px;
 }
 
 
-.track-index-item:nth-child(-n+3) .track-artist{
+a:nth-child(-n+3) .track-index-item .track-artist{
   font-size: 0.9em;
   font-weight: 500;
 }
 
-.track-index-item:nth-child(n+4) .title-and-artist {
+a:nth-child(n+4) .track-index-item .title-and-artist {
   display: flex;
 }
 
 //trash code fix
-.track-index-item:nth-child(n+4) .small-title:after {
+a:nth-child(n+4) .track-index-item .small-title:after {
   content: " b";
   text-transform: lowercase;
 }
 
-.track-index-item:nth-child(n+4) .small-artist:before {
+a:nth-child(n+4) .track-index-item .small-artist:before {
   content: "y ";
   text-transform: lowercase;
-}
-
-//gets rid of the underline after making the entire section a link
-a {
-  text-decoration: none;
-  color: black;
-  display: flex;
 }
