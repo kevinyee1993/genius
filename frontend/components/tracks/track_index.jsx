@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class TrackIndex extends React.Component {
 
@@ -17,23 +18,26 @@ class TrackIndex extends React.Component {
   render() {
     const tracks = this.props.tracks.map(track => {
       return (
-        <section class="track-index-item">
 
-          <p class="track-number">
-            {track.id}
-          </p>
+        <Link to={`/tracks/${track.id}`}>
+          <section class="track-index-item">
 
-          <section class="title-and-artist">
-            <p class="track-title">
-              {track.title}
+            <p class="track-number">
+              {track.id}
             </p>
 
-            <p class="track-artist">
-              {track.artist}
-            </p>
-        </section>
+            <section class="title-and-artist">
+              <p class="track-title small-title">
+                {track.title}
+              </p>
 
+              <p class="track-artist small-artist">
+                {track.artist}
+              </p>
+          </section>
         </section>
+      </Link>
+
       );
     });
 

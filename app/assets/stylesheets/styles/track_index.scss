@@ -1,8 +1,21 @@
 .track-index-item {
-  margin: 10px;
   display: flex;
   border-bottom: 1px solid #CCCCCC;
-  padding: 10px;
+  padding: 15px;
+  padding-left: 35px;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: black;
+}
+
+//gets rid of the underline after making the entire section a link
+a {
+  text-decoration: none;
+}
+
+.track-index-item:hover {
+  background-color: #E9E9E9;
+  transition: background-color .25s ease;
 }
 
 .track-number {
@@ -15,9 +28,6 @@
   padding: 10px 13px;
 }
 
-
-
-
 .track-index-item:nth-child(-n+3) .track-number {
   border: 2px solid black;
 }
@@ -26,11 +36,27 @@
 .track-index-item:nth-child(-n+3) .track-title{
   font-size: 1.5em;
   font-weight: 700;
-  margin-bottom: 3px;
+  // margin-bottom: 3px;
 }
 
 
 .track-index-item:nth-child(-n+3) .track-artist{
   font-size: 0.9em;
   font-weight: 500;
+}
+
+.track-index-item:nth-child(n+4) .title-and-artist {
+  display: flex;
+
+}
+
+//trash code fix
+.track-index-item:nth-child(n+4) .small-title:after {
+  content: " b";
+  text-transform: lowercase;
+}
+
+.track-index-item:nth-child(n+4) .small-artist:before {
+  content: "y ";
+  text-transform: lowercase;
 }
