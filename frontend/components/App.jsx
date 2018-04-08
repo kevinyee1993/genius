@@ -10,6 +10,7 @@ import Modal from './modal/modal';
 //test begin!
 import TrackIndexContainer from './tracks/track_index_container';
 import TrackShowContainer from './tracks/track_show_container';
+import EditTrackLyricsContainer from './tracks/edit_track_lyrics_container';
 //test end!
 
 //dummy components for now
@@ -36,6 +37,7 @@ const App = () => (
     <Navbar />
 
     <Switch>
+      <Route path="/tracks/:trackId/edit" component={ EditTrackLyricsContainer } />
       <Route path="/tracks/:trackId" component={ TrackShowContainer } />
       <Route path="/" component={ TrackIndexContainer } />
     </Switch>

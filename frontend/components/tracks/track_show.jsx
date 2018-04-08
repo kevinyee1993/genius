@@ -6,7 +6,8 @@ class TrackShow extends React.Component {
     super(props);
   }
 
-
+//TODO: something might be wrong here because after refreshing,
+//the page becomes empty and the state resets
   componentDidMount() {
     this.props.fetchAllTracks();
     // this.props.fetchSingleTrack(this.props.match.params.trackId);
@@ -46,6 +47,7 @@ class TrackShow extends React.Component {
       backgroundPosition: '0 -70px',
     };
 
+
     return(
       <div>
         <header className="track-show-header" style={ style }>
@@ -69,6 +71,8 @@ class TrackShow extends React.Component {
         </body>
     </div>
     );
+
+
   }
 }
 

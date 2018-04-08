@@ -6,8 +6,8 @@ import Root from './components/root';
 //just testing this
 import { login, clearErrors } from './actions/session_actions';
 import { receiveCurrentUser } from './actions/session_actions';
-import { fetchAllTracks, fetchSingleTrack, updateTrack } from './util/track_api_util';
-import { receiveSingleTrack, receiveAllTracks } from './actions/track_actions';
+import { fetchAllTracks, fetchSingleTrack } from './util/track_api_util';
+import { receiveSingleTrack, receiveAllTracks, updateTrack } from './actions/track_actions';
 //end of testing imports
 
 
@@ -31,12 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
     //api util tests
       window.fetchAllTracks = fetchAllTracks;
       window.fetchSingleTrack = fetchSingleTrack;
-      window.updateTrack = updateTrack;
+      // window.updateTrack = updateTrack;
 
     //action tests
       window.receiveSingleTrack = receiveSingleTrack;
       window.receiveAllTracks = receiveAllTracks;
-      // window.updateTrack = updateTrack;
+      window.updateTrack = updateTrack;
 
 //END TESTS
 

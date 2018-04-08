@@ -16,7 +16,6 @@ class TrackIndex extends React.Component {
 
   render() {
 
-
     const tracks = this.props.tracks.map(track => {
       let trackImage;
       if (track.img_url) {
@@ -28,7 +27,6 @@ class TrackIndex extends React.Component {
       return (
         <Link to={`/tracks/${track.id}`}>
         <section className="track-index-item">
-
               <p className="track-number">
                 {track.id}
               </p>
