@@ -24,8 +24,10 @@ class TrackShow extends React.Component {
 
   render() {
     let album;
+    let albumTag;
     if (this.props.track.album) {
-      album = `Album ${ this.props.track.album }`;
+      album = `${ this.props.track.album }`;
+      albumTag = 'Album ';
     }
 
     //if no image url is provided by the user, use this default image
@@ -39,18 +41,30 @@ class TrackShow extends React.Component {
     //sets the background of the header using html
     let style = {
       backgroundImage: `linear-gradient(rgb(0,0,0,0.7), rgb(0,0,0,0.7)), url(${ trackImage })`,
+      backgroundPosition: '0 -70px',
     };
 
     return(
       <div>
         <header className="track-show-header" style={ style }>
           <img src={ trackImage }></img>
+
           <section className="track-info">
             <h1 className = "show-track-title">{ this.props.track.title }</h1>
             <h2 className = "show-track-artist">{ this.props.track.artist }</h2>
-            <h3 className = "show-track-album">{ album }</h3>
+
+            <div class="album-info">
+              <h3 className="album-tag">{albumTag }</h3>
+              <h3 className = "show-track-album">{ album }</h3>
+            </div>
+
+
           </section>
         </header>
+
+        <body className="track-lyrics">
+          <p>{ this.props.track.lyrics }</p>
+        </body>
     </div>
     );
   }

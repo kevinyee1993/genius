@@ -1,12 +1,8 @@
-
 //want to alter the height of this header later
 .track-show-header {
   display: flex;
-   // background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
-   // background-image: url("http://i0.kym-cdn.com/photos/images/facebook/000/993/875/084.png");
-  // background-color: grey;
-  // background-repeat: no-repeat;
   background-size: 100%;
+  padding: 2.25rem 1.5rem 1.5rem 2.5rem;
 }
 
 //may need to fix this, depending on the picture the percentages can mean different things
@@ -18,6 +14,11 @@
   margin: 10px;
 }
 
+.track-info {
+  text-transform: capitalize;
+  padding: 20px 0 0 4px;
+}
+
 .show-track-title {
   color: #FFFE7D;
   font-size: 1.5em;
@@ -25,5 +26,22 @@
 
 .show-track-artist {
   color: white;
-  font-sizse: 1.313em;
+  font-size: 1.313em;
+  padding: 10px 0 10px 0;
+
+}
+
+.album-info {
+  display: flex;
+  font-size: 13px;
+
+  .album-tag {
+    margin-right: 5px;
+    color: #9A9A9A;
+  }
+
+  .show-track-album {
+    color: #7F90E2;
+  }
+
 }

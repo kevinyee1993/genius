@@ -6,6 +6,7 @@
   text-transform: capitalize;
   cursor: pointer;
   color: black;
+  height: 40px;
 }
 
 .track-index-item:hover {
@@ -17,6 +18,16 @@
   margin: 0 10px 0 0;
 }
 
+a:nth-child(-n+3) .track-index-item img {
+  height: 55px;
+  width: 60px;
+}
+
+a:nth-child(n+4) .track-index-item img {
+  height: 50px;
+  width: 50px;
+}
+
 .track-index-item .track-number {
   font-size: 1.5em;
   font-weight: 600;
@@ -26,8 +37,6 @@
 //gets rid of the underline after making the entire section a link
 a {
   text-decoration: none;
-//   color: black;
-//   display: flex;
 }
 
 a:nth-child(-n+3) .track-index-item .track-number {
@@ -38,7 +47,6 @@ a:nth-child(-n+3) .track-index-item .track-number {
 a:nth-child(-n+3) .track-index-item .track-title{
   font-size: 1.5em;
   font-weight: 700;
-  // margin-bottom: 3px;
 }
 
 

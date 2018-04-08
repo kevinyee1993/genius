@@ -13,18 +13,27 @@ class TrackIndex extends React.Component {
 
 
   //add this image stuff in later!! then have to style it too
-  // <img src="https://s.abcnews.com/images/Lifestyle/puppy-ht-3-er-170907_4x3_992.jpg"></img>
 
   render() {
-    const tracks = this.props.tracks.map(track => {
-      return (
 
+
+    const tracks = this.props.tracks.map(track => {
+      let trackImage;
+      if (track.img_url) {
+        trackImage = `${ track.image_url }`;
+      } else {
+        trackImage = "http://i0.kym-cdn.com/photos/images/facebook/000/993/875/084.png";
+      }
+
+      return (
         <Link to={`/tracks/${track.id}`}>
         <section className="track-index-item">
 
               <p className="track-number">
                 {track.id}
               </p>
+
+              <img src={ trackImage }></img>
 
               <section className="title-and-artist">
                 <p className="track-title small-title">
