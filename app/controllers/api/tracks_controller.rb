@@ -19,14 +19,12 @@ class Api::TracksController < ApplicationController
   end
 
   def update
-    @track = current_user.links.find(params[:id])
-
-    if @link.update_attributes(link_params)
+    @track = current_user.tracks.find(params[:id])
+    if @track.update_attributes(track_params)
       render :show
     else
       render json: @post.errors.full_messages, status: 422
     end
-
   end
 
   private

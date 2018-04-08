@@ -44,3 +44,11 @@ export const fetchSingleTrack = (id) => dispatch => (
     dispatch(receiveErrors(err.responseJSON))
   ))
 );
+
+export const updateTrack = (track) => dispatch => (
+  APIUtil.updateTrack(track).then(track => (
+    dispatch(receiveSingleTrack(track))
+  ), err => (
+    dispatch(receiveErrors(err.responseJSON))
+  ))
+);
