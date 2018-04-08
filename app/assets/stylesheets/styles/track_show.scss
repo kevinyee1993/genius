@@ -1,7 +1,20 @@
+
+//want to alter the height of this header later
 .track-show-header {
   display: flex;
-  background-color: grey;
+  background-image: url("http://i0.kym-cdn.com/photos/images/facebook/000/993/875/084.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
+
+.track-show-header-container {
+  background-color: black;
+}
+
+// .track-show-header img {
+//   opacity: 0.5;
+// }
+
 
 //may need to fix this, depending on the picture the percentages can mean different things
 //how to make it so that each picture starts off as the same width/height and then you do a percentage of that
@@ -14,8 +27,10 @@
 
 .show-track-title {
   color: #FFFE7D;
+  font-size: 1.5em;
 }
 
 .show-track-artist {
   color: white;
+  font-sizse: 1.313em;
 }

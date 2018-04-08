@@ -34,17 +34,21 @@ class TrackShow extends React.Component {
 
     return(
       <div>
-        <header className="track-show-header">
+
+        <div className="track-show-header-container">
+          <header className="track-show-header">
             <img src="http://i0.kym-cdn.com/photos/images/facebook/000/993/875/084.png" className="track-pic" alt="track"></img>
 
-          <section className="track-info">
-            <h1 className = "show-track-title">{ this.props.track.title }</h1>
-            <h2 className = "show-track-artist">{ this.props.track.artist }</h2>
-            <h3 className = "show-track-album">{ album }</h3>
-          </section>
+            <section className="track-info">
+              <h1 className = "show-track-title">{ this.props.track.title }</h1>
+              <h2 className = "show-track-artist">{ this.props.track.artist }</h2>
+              <h3 className = "show-track-album">{ album }</h3>
+            </section>
 
 
-        </header>
+          </header>
+        </div>
+
       </div>
     );
   }

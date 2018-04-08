@@ -27,7 +27,7 @@ const App = () => (
       <p className="searchbar">Search lyrics & more</p>
 
       <Link to={`/`}>
-        <p className="logo">I am the app component</p>
+        <p className="logo">GENIUS CLONE</p>
       </Link>
 
       <GreetingContainer />
