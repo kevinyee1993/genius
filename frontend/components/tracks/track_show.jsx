@@ -28,28 +28,30 @@ class TrackShow extends React.Component {
       album = `Album ${ this.props.track.album }`;
     }
 
-    //need to put an if statement here, if there is no provided
-    //img_url for the track, need to give it a default value
-    //TODO: nick young confused picture
+    //if no image url is provided by the user, use this default image
+    let trackImage;
+    if (this.props.track.img_url) {
+      trackImage = `${ this.props.track.image_url }`;
+    } else {
+      trackImage = "http://i0.kym-cdn.com/photos/images/facebook/000/993/875/084.png";
+    }
+
+    //sets the background of the header using html
+    let style = {
+      backgroundImage: `linear-gradient(rgb(0,0,0,0.7), rgb(0,0,0,0.7)), url(${ trackImage })`,
+    };
 
     return(
       <div>
-
-        <div className="track-show-header-container">
-          <header className="track-show-header">
-            <img src="http://i0.kym-cdn.com/photos/images/facebook/000/993/875/084.png" className="track-pic" alt="track"></img>
-
-            <section className="track-info">
-              <h1 className = "show-track-title">{ this.props.track.title }</h1>
-              <h2 className = "show-track-artist">{ this.props.track.artist }</h2>
-              <h3 className = "show-track-album">{ album }</h3>
-            </section>
-
-
-          </header>
-        </div>
-
-      </div>
+        <header className="track-show-header" style={ style }>
+          <img src={ trackImage }></img>
+          <section className="track-info">
+            <h1 className = "show-track-title">{ this.props.track.title }</h1>
+            <h2 className = "show-track-artist">{ this.props.track.artist }</h2>
+            <h3 className = "show-track-album">{ album }</h3>
+          </section>
+        </header>
+    </div>
     );
   }
 }
