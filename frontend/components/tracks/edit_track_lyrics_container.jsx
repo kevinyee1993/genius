@@ -31,7 +31,7 @@ const mapStateToProps = (state, ownProps) => {
 //that state is
 const mapDispatchToProps = dispatch => ({
   fetchSingleTrack: id => dispatch(fetchSingleTrack(id)),
-  updateTrack: track => dispatch(updateTrack(track))
+  updateTrack: track => dispatch(updateTrack({ track }))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(editTrackLyrics);

@@ -32,7 +32,7 @@ export const fetchSingleTrack = (id) => (
 //TODO: Get back to this if not working... let's test it out first
 //takes track and sends it to that url so that it can update it
 //BUT that url doesn't exist...?!?!?!?
-export const updateTrack = ({track}) => (
+export const updateTrack = ({ track }) => (
   $.ajax({
     method: 'PATCH',
     // url: `api/users/1/tracks/1`,
