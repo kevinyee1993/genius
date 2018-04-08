@@ -18,6 +18,10 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_many :tracks,
+    foreign_key: :author_id,
+    class_name: 'Track'
+
   attr_reader :password
 
   def password=(password)
