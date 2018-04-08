@@ -1,0 +1,21 @@
+.track-show-header {
+  display: flex;
+  background-color: grey;
+}
+
+//may need to fix this, depending on the picture the percentages can mean different things
+//how to make it so that each picture starts off as the same width/height and then you do a percentage of that
+.track-pic {
+  width: 20%;
+  height: 20%;
+  border: 2px solid #9A9A9A;
+  margin: 10px;
+}
+
+.show-track-title {
+  color: #FFFE7D;
+}
+
+.show-track-artist {
+  color: white;
+}
