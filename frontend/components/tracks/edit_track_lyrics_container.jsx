@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchSingleTrack, updateTrack } from '../../actions/track_actions';
 
 //MAYBE NEED TO CHANGE THIS LATER
-import editTrackLyrics from './edit_track_lyrics';
+import EditTrackLyrics from './edit_track_lyrics';
 
 //actually need to import just some generic form
 
@@ -34,4 +34,4 @@ const mapDispatchToProps = dispatch => ({
   updateTrack: track => dispatch(updateTrack({ track }))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(editTrackLyrics);
+export default connect(mapStateToProps, mapDispatchToProps)(EditTrackLyrics);

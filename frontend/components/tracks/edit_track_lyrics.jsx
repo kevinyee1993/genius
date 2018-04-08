@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-class editTrackLyrics extends React.Component {
+class EditTrackLyrics extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -38,4 +38,4 @@ class editTrackLyrics extends React.Component {
   }
 }
 
-export default editTrackLyrics;
+export default EditTrackLyrics;
