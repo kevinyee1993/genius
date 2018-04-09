@@ -15,7 +15,7 @@ class Lyrics extends React.Component {
       <div>
         <div className="track-show-edit-buttons">
           <Link to={`/tracks/${this.props.track.id}/edit/lyrics`}>Edit Lyrics</Link>
-          <Link to={`/tracks/${this.props.track.id}/edit/info`}>Edit Info</Link>
+          <Link to={`/tracks/${this.props.track.id}/edit/info`}>Edit Song Facts</Link>
         </div>
 
         <body className="track-lyrics">
