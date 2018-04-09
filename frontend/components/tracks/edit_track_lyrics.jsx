@@ -16,7 +16,8 @@ class EditTrackLyrics extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.updateTrack(this.state).then(() => this.props.history.push('/'));
+    this.props.updateTrack(this.state).then(() =>
+    this.props.history.push(`/tracks/${this.props.track.id}`));
   }
 
 
