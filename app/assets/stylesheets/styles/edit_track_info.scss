@@ -7,5 +7,24 @@
     bottom: 0;
     right: 0;
     left: 5%;
-    z-index: 2;
+    z-index: 3;
+}
+
+.title-and-artists {
+    color: #9AA8E9;
+    border-bottom: 2px solid #9AA8E8;
+    padding: 10px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.modal-screen {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }

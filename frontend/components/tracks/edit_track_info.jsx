@@ -19,10 +19,20 @@ class EditTrackInfo extends React.Component {
     this.props.updateTrack(this.state).then(() => this.props.history.push('/'));
   }
 
+  handleExitModalClick(e) {
+    e.preventDefault();
+    this.props.history.push(`/tracks/${this.props.track.id}`);
+  }
+
   render() {
     return (
+
       <div>
+        <div className="modal-screen" onClick={(e) => this.handleExitModalClick(e) }></div>
+
         <form onSubmit={ this.handleSubmit } className="track-info-form">
+          <h1 className="title-and-artists">Title and Artists</h1>
+
           <label>Title
             <input type="text"
               value={ this.state.title }
@@ -49,6 +59,8 @@ class EditTrackInfo extends React.Component {
 
           <input type="submit"></input>
         </form>
+
+
       </div>
     );
   }
