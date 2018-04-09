@@ -1,12 +1,12 @@
 .track-index-item {
   display: flex;
   border-bottom: 1px solid #CCCCCC;
-  padding: 15px;
-  padding-left: 35px;
+  padding: 0 15px 0 0;
+  padding-left: 23px;
   text-transform: capitalize;
   cursor: pointer;
   color: black;
-  height: 40px;
+  height: 45px;
 }
 
 .track-index-item:hover {
@@ -19,19 +19,20 @@
 }
 
 a:nth-child(-n+3) .track-index-item img {
-  height: 55px;
-  width: 60px;
+    height: 100%;
+    width: 80px;
 }
 
 a:nth-child(n+4) .track-index-item img {
-  height: 50px;
-  width: 50px;
+  height: 100%;
+  width: 8%;
 }
 
 .track-index-item .track-number {
-  font-size: 1.5em;
-  font-weight: 600;
-  padding: 10px 13px;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 10px 13px;
+    margin-right: 25px;
 }
 
 //gets rid of the underline after making the entire section a link
@@ -39,8 +40,16 @@ a {
   text-decoration: none;
 }
 
+a:nth-child(-n+3) .track-index-item {
+    padding: 0px 15px 0px 0px;
+    height: 70px;
+}
+
 a:nth-child(-n+3) .track-index-item .track-number {
-  border: 2px solid black;
+    border: 2px solid black;
+    padding: 10px 15px 10px 15px;
+    height: 32%;
+    margin: 11px 20px 20px 20px;
 }
 
 
