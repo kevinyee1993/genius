@@ -1,0 +1,45 @@
+.edit-track-lyrics-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.lyric-field {
+  background-color: #F5F5F5;
+  width: 400px;
+  height: 500px;
+  border: none;
+}
+
+.track-info-submit-cancel {
+  display: flex;
+}
+
+.edit-track-info-submit {
+    color: #5DC746;
+    border: 2px solid #5DC746;
+    background-color: white;
+    padding: 10px 10px 20px 10px;
+    height: 30px;
+    width: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.edit-track-info-submit:hover {
+  background-color: #DFF4DA;
+}
+
+.edit-track-lyrics-form a {
+    color: black;
+    font-size: 12px;
+    border: 2px solid black;
+    height: 21px;
+    width: 36px;
+    padding: 10px 10px 0px 5px;
+    cursor: pointer;
+}
+
+.edit-track-lyrics-form a:hover {
+  background-color: #F5F5F5;
+}
