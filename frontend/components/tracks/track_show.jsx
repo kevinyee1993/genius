@@ -53,9 +53,9 @@ class TrackShow extends React.Component {
     //if no image url is provided by the user, use this default image
     let trackImage;
     if (this.props.track.img_url) {
-      trackImage = `${ this.props.track.image_url }`;
+      trackImage = this.props.track.img_url;
     } else {
-      trackImage = "http://i0.kym-cdn.com/photos/images/facebook/000/993/875/084.png";
+      trackImage = "https://metrouk2.files.wordpress.com/2017/03/512366437.jpg?w=748&h=498&crop=1";
     }
 
     //sets the background of the header using html
