@@ -94,10 +94,6 @@ class TrackShow extends React.Component {
 
         <Route path="/tracks/:trackId/edit/info" component={ EditTrackInfoContainer }/>
 
-        <div className="track-show-edit-buttons">
-          <Link to={`/tracks/${this.props.track.id}/edit/lyrics`}>Edit Lyrics</Link>
-          <Link to={`/tracks/${this.props.track.id}/edit/info`}>Edit Info</Link>
-        </div>
 
         <Switch>
           <Route path="/tracks/:trackId/edit/lyrics" component={ EditTrackLyricsContainer } />
@@ -111,3 +107,9 @@ class TrackShow extends React.Component {
 }
 
 export default TrackShow;
+
+
+// <div className="track-show-edit-buttons">
+//   <Link to={`/tracks/${this.props.track.id}/edit/lyrics`}>Edit Lyrics</Link>
+//   <Link to={`/tracks/${this.props.track.id}/edit/info`}>Edit Info</Link>
+// </div>
