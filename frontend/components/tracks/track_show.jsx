@@ -19,7 +19,7 @@ class TrackShow extends React.Component {
 //the page becomes empty and the state resets
   componentDidMount() {
     this.props.fetchAllTracks();
-    // this.props.fetchSingleTrack(this.props.match.params.trackId);
+    this.props.fetchSingleTrack(this.props.match.params.trackId);
   }
 
 
@@ -69,7 +69,6 @@ class TrackShow extends React.Component {
     if(this.props.track.author_id) {
       editLyricLink = (<Link to={`/tracks/${this.props.track.id}/edit/lyrics`}>Edit Lyrics</Link>);
     }
-
 
     return(
       <div>

@@ -25,7 +25,12 @@ class EditTrackLyrics extends React.Component {
     return (
       <div>
 
+
         <form onSubmit={ this.handleSubmit } className="edit-track-lyrics-form">
+          <div className="track-info-submit-cancel">
+            <input type="submit" value="Save" className="edit-track-lyrics-submit"/>
+            <Link to={`/tracks/${this.props.track.id}`}>Cancel</Link>
+          </div>
 
           <textarea
             value={ this.state.lyrics }
@@ -33,7 +38,7 @@ class EditTrackLyrics extends React.Component {
             className="lyric-field"/>
 
           <div className="track-info-submit-cancel">
-            <input type="submit" value="Save" className="edit-track-info-submit"/>
+            <input type="submit" value="Save" className="edit-track-lyrics-submit"/>
             <Link to={`/tracks/${this.props.track.id}`}>Cancel</Link>
           </div>
         </form>
