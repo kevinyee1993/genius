@@ -1,5 +1,14 @@
 import React from 'react';
 
+
+//may not need these, just here to figure out how to render edit lyric component
+import { Route, Switch, Link } from 'react-router-dom';
+
+//component I want to render
+import LyricsContainer from './lyrics_container';
+
+import EditTrackLyricsContainer from './edit_track_lyrics_container';
+
 class TrackShow extends React.Component {
 
   constructor(props) {
@@ -25,6 +34,11 @@ class TrackShow extends React.Component {
   }
 
 
+
+  //here check if you are on the edit lyrics page and if you are, set the edit
+  //lyrics form to be rendered in place of the actual lyrics
+  //otherwise just display the lyrics
+  //how to check that you are in editing mode or not
   render() {
     let album;
     let albumTag;
@@ -46,12 +60,19 @@ class TrackShow extends React.Component {
       backgroundImage: `linear-gradient(rgb(0,0,0,0.7), rgb(0,0,0,0.7)), url(${ trackImage })`,
       backgroundPosition: '0 -70px',
     };
+    //
+    // let showLyric = (
+    //   <body className="track-lyrics">
+    //     <p>{ this.props.track.lyrics }</p>
+    //   </body>);
 
 
     return(
       <div>
         <header className="track-show-header" style={ style }>
           <img src={ trackImage }></img>
+
+
 
           <section className="track-info">
             <h1 className = "show-track-title">{ this.props.track.title }</h1>
@@ -62,13 +83,13 @@ class TrackShow extends React.Component {
               <h3 className = "show-track-album">{ album }</h3>
             </div>
 
-
           </section>
         </header>
 
-        <body className="track-lyrics">
-          <p>{ this.props.track.lyrics }</p>
-        </body>
+        <Switch>
+          <Route path="/tracks/:trackId/edit/lyrics" component={ EditTrackLyricsContainer } />
+          <Route path="/tracks/:trackId/" component={ LyricsContainer } />
+        </Switch>
     </div>
     );
 

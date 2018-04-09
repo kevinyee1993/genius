@@ -5,7 +5,6 @@ import { fetchSingleTrack, updateTrack } from '../../actions/track_actions';
 //MAYBE NEED TO CHANGE THIS LATER
 import EditTrackLyrics from './edit_track_lyrics';
 
-//actually need to import just some generic form
 
 
 //the state that this edit_track_lyrics component gets is what the

@@ -19,6 +19,7 @@ class EditTrackLyrics extends React.Component {
     this.props.updateTrack(this.state).then(() => this.props.history.push('/'));
   }
 
+
   render() {
     return (
       <div>
