@@ -7,9 +7,10 @@
 .lyric-field {
   background-color: #F5F5F5;
   width: 400px;
-  height: 500px;
   border: none;
   font-size: 15px;
+  max-height: 1000px;
+  overflow: auto;
 }
 
 .track-info-submit-cancel {
