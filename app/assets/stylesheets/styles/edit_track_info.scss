@@ -28,3 +28,18 @@
   right: 0;
   z-index: 2;
 }
+
+.artist-album-input {
+  display: flex;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-track-info-submit {
+  border: 2px solid #9AA8E9;
+  color: #9AA8E9;
+  background-color: #E9E9E9;
+}

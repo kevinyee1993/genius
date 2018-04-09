@@ -32,33 +32,42 @@ class EditTrackInfo extends React.Component {
         <div className="modal-screen" onClick={(e) => this.handleExitModalClick(e) }></div>
 
         <form onSubmit={ this.handleSubmit } className="track-info-form">
+
           <h1 className="title-and-artists">Title and Artists</h1>
 
-          <label>Title
+          <div className="input-field">
+            <label>Title</label>
             <input type="text"
               value={ this.state.title }
               onChange={ this.update('title') } />
-          </label>
+          </div>
 
-          <label>Artist
-            <input type="text"
-              value={ this.state.artist }
-              onChange={ this.update('artist') }/>
-          </label>
+          <div className="artist-album-input">
 
-          <label>Album
-            <input type="text"
-              value={ this.state.album }
-              onChange={ this.update('album') }/>
-          </label>
+            <div className="input-field">
+              <label>Artist</label>
+                <input type="text"
+                  value={ this.state.artist }
+                  onChange={ this.update('artist') }/>
+            </div>
 
-          <label>Image
+            <div className="input-field">
+              <label>Album</label>
+                <input type="text"
+                  value={ this.state.album }
+                  onChange={ this.update('album') }/>
+            </div>
+
+          </div>
+
+          <div className="input-field">
+            <label>Image</label>
             <input type="text"
               value={ this.state.img_url }
               onChange={ this.update('img_url') }/>
-          </label>
+          </div>
 
-          <input type="submit"></input>
+          <input type="submit" className="edit-track-info-submit" value="Save"></input>
         </form>
 
 
