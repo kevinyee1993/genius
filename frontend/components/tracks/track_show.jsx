@@ -6,8 +6,8 @@ import { Route, Switch, Link } from 'react-router-dom';
 
 //component I want to render
 import LyricsContainer from './lyrics_container';
-
 import EditTrackLyricsContainer from './edit_track_lyrics_container';
+import EditTrackInfoContainer from './edit_track_info_container';
 
 class TrackShow extends React.Component {
 
@@ -85,6 +85,8 @@ class TrackShow extends React.Component {
 
           </section>
         </header>
+
+        <Route path="/tracks/:trackId/edit/info" component={ EditTrackInfoContainer }/>
 
         <Switch>
           <Route path="/tracks/:trackId/edit/lyrics" component={ EditTrackLyricsContainer } />

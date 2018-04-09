@@ -39,7 +39,6 @@ const App = () => (
 
 
     <Switch>
-      <Route path="/tracks/:trackId/edit/info" component={ EditTrackInfoContainer } />
       <Route path="/tracks/:trackId" component={ TrackShowContainer } />
       <Route path="/" component={ TrackIndexContainer } />
     </Switch>
