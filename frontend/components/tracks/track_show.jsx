@@ -94,8 +94,10 @@ class TrackShow extends React.Component {
 
         <Route path="/tracks/:trackId/edit/info" component={ EditTrackInfoContainer }/>
 
-        <Link to={`/tracks/${this.props.track.id}/edit/lyrics`}>Edit Lyrics</Link>
-        <Link to={`/tracks/${this.props.track.id}/edit/info`}>Edit Info</Link>
+        <div className="track-show-edit-buttons">
+          <Link to={`/tracks/${this.props.track.id}/edit/lyrics`}>Edit Lyrics</Link>
+          <Link to={`/tracks/${this.props.track.id}/edit/info`}>Edit Info</Link>
+        </div>
 
         <Switch>
           <Route path="/tracks/:trackId/edit/lyrics" component={ EditTrackLyricsContainer } />

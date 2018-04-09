@@ -45,3 +45,21 @@
   }
 
 }
+
+.track-show-edit-buttons {
+  padding: 20px 10px;
+}
+
+.track-show-edit-buttons a {
+  border: 2px solid black;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px;
+  color: black;
+  background-color: white;
+  margin-right: 10px;
+}
+
+.track-show-edit-buttons a:hover {
+  background-color: #F5F5F5;
+}

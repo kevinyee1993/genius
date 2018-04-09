@@ -14,8 +14,8 @@ class Lyrics extends React.Component {
       <div>
         <body className="track-lyrics">
             {this.props.track.lyrics.split('\n').map((item, key) => {
-              return <span key={key}>{item}<br/></span>;
-              })};
+              return <span key={key}>{item}<br/></span>
+              })}
         </body>
       </div>
     );
