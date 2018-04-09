@@ -3,18 +3,19 @@
     height: 500px;
     width: 700px;
     position: absolute;
-    top: 9%;
+    top: 2%;
     bottom: 0;
     right: 0;
     left: 25%;
     z-index: 3;
+    padding: 21px 22px;
 }
 
 .title-and-artists {
     color: #9AA8E9;
     border-bottom: 2px solid #9AA8E8;
-    padding: 10px;
-    width: 90%;
+    padding: 0px;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 10px;
 }
@@ -33,10 +34,27 @@
   display: flex;
 }
 
-.input-field {
-  display: flex;
-  flex-direction: column;
+.info-input-label {
+  margin-bottom: 7px;
 }
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.not-submit-input {
+    padding: 10px 3px;
+    border: 2px solid #CCCCCC;
+}
+
+.artist-album-input input {
+    width: 326px;
+    margin-right: 8px;
+}
+
 
 .edit-track-info-submit {
   border: 2px solid #9AA8E9;

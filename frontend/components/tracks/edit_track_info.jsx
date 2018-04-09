@@ -36,35 +36,39 @@ class EditTrackInfo extends React.Component {
           <h1 className="title-and-artists">Title and Artists</h1>
 
           <div className="input-field">
-            <label>Title</label>
+            <label className="info-input-label">Title</label>
             <input type="text"
               value={ this.state.title }
-              onChange={ this.update('title') } />
+              onChange={ this.update('title') }
+              className="not-submit-input"/>
           </div>
 
           <div className="artist-album-input">
 
             <div className="input-field">
-              <label>Artist</label>
+              <label className="info-input-label">Artist</label>
                 <input type="text"
                   value={ this.state.artist }
-                  onChange={ this.update('artist') }/>
+                  onChange={ this.update('artist') }
+                  className="not-submit-input"/>
             </div>
 
             <div className="input-field">
-              <label>Album</label>
+              <label className="info-input-label">Album</label>
                 <input type="text"
                   value={ this.state.album }
-                  onChange={ this.update('album') }/>
+                  onChange={ this.update('album') }
+                  className="not-submit-input"/>
             </div>
 
           </div>
 
           <div className="input-field">
-            <label>Image</label>
+            <label className="info-input-label">Image</label>
             <input type="text"
               value={ this.state.img_url }
-              onChange={ this.update('img_url') }/>
+              onChange={ this.update('img_url') }
+              className="not-submit-input"/>
           </div>
 
           <input type="submit" className="edit-track-info-submit" value="Save"></input>
