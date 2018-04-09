@@ -1,5 +1,5 @@
 @tracks.each do |track|
   json.set! track.id do
-    json.extract! track, :id, :title, :lyrics, :artist, :album, :img_url
+    json.extract! track, :id, :title, :lyrics, :artist, :album, :img_url, :author_id
   end
 end

@@ -4,6 +4,9 @@ import React from 'react';
 //may not need these, just here to figure out how to render edit lyric component
 import { Route, Switch, Link } from 'react-router-dom';
 
+//testing authroutes
+import { AuthRoute, ProtectedRoute } from '../../util/route_util';
+
 //component I want to render
 import LyricsContainer from './lyrics_container';
 import EditTrackLyricsContainer from './edit_track_lyrics_container';
@@ -55,7 +58,7 @@ class TrackShow extends React.Component {
     if (this.props.track.img_url) {
       trackImage = this.props.track.img_url;
     } else {
-      trackImage = "https://metrouk2.files.wordpress.com/2017/03/512366437.jpg?w=748&h=498&crop=1";
+      trackImage = "http://i0.kym-cdn.com/photos/images/facebook/000/993/875/084.png";
     }
 
     //sets the background of the header using html
@@ -69,9 +72,9 @@ class TrackShow extends React.Component {
 
     //need a way to check if the current user ID is equal to the
     //author id of the current track
-    if(this.props.track.author_id) {
-      editLyricLink = (<Link to={`/tracks/${this.props.track.id}/edit/lyrics`}>Edit Lyrics</Link>);
-    }
+    // if(this.props.track.author_id) {
+    //   editLyricLink = (<Link to={`/tracks/${this.props.track.id}/edit/lyrics`}>Edit Lyrics</Link>);
+    // }
 
     return(
       <div>
@@ -92,11 +95,11 @@ class TrackShow extends React.Component {
           </section>
         </header>
 
-        <Route path="/tracks/:trackId/edit/info" component={ EditTrackInfoContainer }/>
+        <ProtectedRoute path="/tracks/:trackId/edit/info" component={ EditTrackInfoContainer }/>
 
 
         <Switch>
-          <Route path="/tracks/:trackId/edit/lyrics" component={ EditTrackLyricsContainer } />
+          <ProtectedRoute path="/tracks/:trackId/edit/lyrics" component={ EditTrackLyricsContainer } />
           <Route path="/tracks/:trackId/" component={ LyricsContainer } />
         </Switch>
     </div>
