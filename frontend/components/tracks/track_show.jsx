@@ -28,7 +28,7 @@ class TrackShow extends React.Component {
   //re-render the page with the new information
 
   componentWillReceiveProps(nextProps) {
-    if(this.props.track.id != nextProps.match.params.trackId) {
+    if(this.props.match.params.trackId != nextProps.match.params.trackId) {
       this.props.fetchSingleTrack(nextProps.match.params.trackId);
     }
   }
@@ -40,8 +40,11 @@ class TrackShow extends React.Component {
   //otherwise just display the lyrics
   //how to check that you are in editing mode or not
   render() {
+
+    if (!this.props.track) return null;
     let album;
     let albumTag;
+
     if (this.props.track.album) {
       album = `${ this.props.track.album }`;
       albumTag = 'Album ';
