@@ -28,7 +28,7 @@ Track.create(title: "Go ahead it's fine",
 
   album: "Ball is Life",
 
-  author_id: 1,
+  author_id: 4,
 
   img_url: "http://i0.kym-cdn.com/photos/images/facebook/000/993/875/084.png"
 )
