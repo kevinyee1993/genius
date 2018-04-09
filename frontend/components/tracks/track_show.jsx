@@ -64,7 +64,7 @@ class TrackShow extends React.Component {
     //sets the background of the header using html
     let style = {
       backgroundImage: `linear-gradient(rgb(0,0,0,0.7), rgb(0,0,0,0.7)), url(${ trackImage })`,
-      backgroundPosition: '0 -70px',
+      backgroundPosition: '0 -185px',
     };
 
     let editLyricLink;

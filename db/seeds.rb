@@ -89,3 +89,19 @@ Track.create(title: "I'll Be Right Outside",
 
   img_url: "https://vignette.wikia.nocookie.net/minecraft/images/0/0f/Box-turtle-smiling-oglala-lakota-college.jpg/revision/latest?cb=20161123230039"
 )
+
+Track.create(title: "Use Me To Test Editing!",
+
+  lyrics: "Test lyrics \n
+  Test lyrics \n
+  Test lyrics \n
+  Test lyrics \n",
+
+  artist: "Kanye Test",
+
+  album: "Test",
+
+  author_id: 4,
+
+  img_url: "https://s.abcnews.com/images/Lifestyle/puppy-ht-3-er-170907_4x3_992.jpg"
+)
