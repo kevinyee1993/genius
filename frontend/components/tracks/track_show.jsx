@@ -60,11 +60,15 @@ class TrackShow extends React.Component {
       backgroundImage: `linear-gradient(rgb(0,0,0,0.7), rgb(0,0,0,0.7)), url(${ trackImage })`,
       backgroundPosition: '0 -70px',
     };
-    //
-    // let showLyric = (
-    //   <body className="track-lyrics">
-    //     <p>{ this.props.track.lyrics }</p>
-    //   </body>);
+
+    let editLyricLink;
+    let editInfoLink;
+
+    //need a way to check if the current user ID is equal to the
+    //author id of the current track
+    if(this.props.track.author_id) {
+      editLyricLink = (<Link to={`/tracks/${this.props.track.id}/edit/lyrics`}>Edit Lyrics</Link>);
+    }
 
 
     return(
@@ -87,6 +91,9 @@ class TrackShow extends React.Component {
         </header>
 
         <Route path="/tracks/:trackId/edit/info" component={ EditTrackInfoContainer }/>
+
+        <Link to={`/tracks/${this.props.track.id}/edit/lyrics`}>Edit Lyrics</Link>
+        <Link to={`/tracks/${this.props.track.id}/edit/info`}>Edit Info</Link>
 
         <Switch>
           <Route path="/tracks/:trackId/edit/lyrics" component={ EditTrackLyricsContainer } />

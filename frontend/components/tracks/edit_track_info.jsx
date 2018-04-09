@@ -22,7 +22,7 @@ class EditTrackInfo extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={ this.handleSubmit }>
+        <form onSubmit={ this.handleSubmit } className="track-info-form">
           <label>Title
             <input type="text"
               value={ this.state.title }
