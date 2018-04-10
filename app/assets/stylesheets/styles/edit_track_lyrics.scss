@@ -1,7 +1,7 @@
 .edit-track-lyrics-form {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 12px 10px;
 }
 
 .lyric-field {
@@ -25,7 +25,7 @@
     width: 50px;
     font-weight: 600;
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .edit-track-lyrics-submit:hover {
@@ -51,4 +51,13 @@
     height: 500px;
     font-size: 15px;
     padding: 21px 17px;
+    background-color: white;
 }
+
+// .track-lyrics {
+//     width: 400px;
+//     height: 500px;
+//     font-size: 15px;
+//     padding: 13px 77px;
+//     background-color: white;
+// }

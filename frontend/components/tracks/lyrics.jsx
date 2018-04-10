@@ -15,10 +15,10 @@ class Lyrics extends React.Component {
   //just testing you know
   mouseUp() {
     let selection = window.getSelection();
-    let link = (<Link to="/">{selection}</Link>);
+    let link = (<Link to="/"></Link>);
     console.log(window.getSelection().toString());
     if(window.getSelection().toString().length > 1) {
-      document.execCommand("createLink", false, "https://www.google.com/");
+      document.execCommand("createLink", false, "/");
     }
   }
 
@@ -36,10 +36,12 @@ class Lyrics extends React.Component {
         </div>);
       }
 
+      // <button onClick={() => this.mouseUp()}>Click me to make a link!</button>
     return(
-      <div onMouseUp={this.mouseUp}>
-
+      <div>
         { editButtons }
+
+        <a href="/">test link</a>
 
         <body className="track-lyrics" contentEditable="true">
             {this.props.track.lyrics.split('\n').map((item, key) => {
