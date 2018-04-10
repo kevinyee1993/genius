@@ -59,3 +59,7 @@ export const receiveErrors = errors => ({
   type: RECEIVE_ANNOTATION_ERRORS,
   errors
 });
+
+export const clearErrors = () => dispatch => (
+  dispatch(receiveErrors([]))
+);

@@ -12,6 +12,10 @@ import LyricsContainer from './lyrics_container';
 import EditTrackLyricsContainer from './edit_track_lyrics_container';
 import EditTrackInfoContainer from './edit_track_info_container';
 
+//test code here
+import CreateAnnotationFormContainer from '../annotations/create_annotation_form_container';
+//end test code
+
 class TrackShow extends React.Component {
 
   constructor(props) {
@@ -91,6 +95,7 @@ class TrackShow extends React.Component {
           </section>
         </header>
 
+        <Route path="/tracks/:trackId/annotations/new" component={ CreateAnnotationFormContainer }/>
 
         <ProtectedRoute path="/tracks/:trackId/edit/info" component={ EditTrackInfoContainer }/>
 

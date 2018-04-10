@@ -59,7 +59,8 @@ selectionMade() {
       let annotationLink;
 
       if(this.state.showLink) {
-        annotationLink = (<Link to="/">Annotate Lyric</Link>);
+        annotationLink = (<Link to={`/tracks/${this.props.track.id}/annotations/new`}
+          onClick={ () => this.setState({ showLink: false }) }>Annotate Lyric</Link>);
       } else {
         annotationLink = "";
       }
