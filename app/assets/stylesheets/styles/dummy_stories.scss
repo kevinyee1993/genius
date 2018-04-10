@@ -1,0 +1,17 @@
+.main-story {
+  height: 327px;
+  width: 530px;
+  background: linear-gradient(#595959, black 50%);
+  // background-color: black;
+}
+
+.main-story img {
+  height: 327px;
+  width: 530px;
+  opacity: 0.3;
+}
+
+.main-story img:hover {
+  opacity: 1;
+  transition: 0.2s;
+}
