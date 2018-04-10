@@ -14,6 +14,18 @@ class EditTrackInfo extends React.Component {
     };
   }
 
+  renderErrors() {
+    return(
+      <ul>
+        { this.props.errors.map((error, i) => (
+          <li key={`error-${i}`} className="error-messages">
+            { error }
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.updateTrack(this.state).then(() =>
@@ -22,6 +34,7 @@ class EditTrackInfo extends React.Component {
 
   handleExitModalClick(e) {
     e.preventDefault();
+    this.props.clearErrors();
     this.props.history.push(`/tracks/${this.props.track.id}`);
   }
 
@@ -34,6 +47,8 @@ class EditTrackInfo extends React.Component {
         <form onSubmit={ this.handleSubmit } className="track-info-form">
 
           <h1 className="title-and-artists">Title and Artists</h1>
+
+          { this.renderErrors() }
 
           <div className="input-field">
             <label className="info-input-label">Title</label>

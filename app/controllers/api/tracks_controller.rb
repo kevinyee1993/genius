@@ -23,7 +23,7 @@ class Api::TracksController < ApplicationController
     if @track.update_attributes(track_params)
       render :show
     else
-      render json: @post.errors.full_messages, status: 422
+      render json: @track.errors.full_messages, status: 422
     end
   end
 

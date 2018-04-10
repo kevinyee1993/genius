@@ -68,6 +68,10 @@ a:nth-child(n+4) .track-index-item .title-and-artist {
   display: flex;
 }
 
+a:nth-child(n+10) .track-index-item .track-number {
+  margin-right: 14px;
+}
+
 //trash code fix
 a:nth-child(n+4) .track-index-item .small-title:after {
   content: " b";

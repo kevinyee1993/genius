@@ -14,6 +14,18 @@ class EditTrackLyrics extends React.Component {
     };
   }
 
+  renderErrors() {
+    return(
+      <ul>
+        { this.props.errors.map((error, i) => (
+          <li key={`error-${i}`} className="error-messages">
+            { error }
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.updateTrack(this.state).then(() =>
@@ -31,6 +43,8 @@ class EditTrackLyrics extends React.Component {
             <input type="submit" value="Save" className="edit-track-lyrics-submit"/>
             <Link to={`/tracks/${this.props.track.id}`}>Cancel</Link>
           </div>
+
+          { this.renderErrors() }
 
           <textarea
             value={ this.state.lyrics }

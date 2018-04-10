@@ -52,3 +52,7 @@ export const updateTrack = (track) => dispatch => (
     dispatch(receiveErrors(err.responseJSON))
   ))
 );
+
+export const clearErrors = () => dispatch => (
+  dispatch(receiveErrors([]))
+);

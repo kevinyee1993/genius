@@ -19,7 +19,7 @@ const mapStateToProps = (state, ownProps) => {
   const defaultTrack = { lyrics: '' };
   const track = state.entities.tracks[ownProps.match.params.trackId] || defaultTrack;
 
-  return { track };
+  return { track, errors: state.errors.track };
 };
 
 //this component needs to grab a specific track using ajax request
