@@ -11,7 +11,19 @@
   opacity: 0.3;
 }
 
+// .main-story:hover {
+//   background: radial-gradient(white, black 70%);
+// }
+
 .main-story img:hover {
-  opacity: 1;
+  opacity: 0.8;
   transition: 0.2s;
+}
+
+.story-heading {
+  color: #222222;
+  text-transform: uppercase;
+  margin-right: .1em;
+  letter-spacing: .04em;
+  font-size: 12px;
 }

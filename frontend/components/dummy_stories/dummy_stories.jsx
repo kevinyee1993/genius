@@ -6,6 +6,8 @@ class DummyStories extends React.Component {
   render() {
     return(
       <div>
+        <h1 className="story-heading">Featured Stories</h1>
+
         <section className="main-story">
           <img src="http://www.dogbazar.org/wp-content/uploads/2014/09/british-bull-dog-puppies.jpg"></img>
 
