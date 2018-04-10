@@ -29,9 +29,9 @@ class TrackShow extends React.Component {
   }
 
   //TODO: DELETE THIS, WAS JUST TESTING HOW TO TEST window.getSelection()
-  // testWindow() {
-  //   console.log(window.getSelection());
-  // }
+  testWindow() {
+    console.log(window.getSelection());
+  }
 
 
   //here check if you are on the edit lyrics page and if you are, set the edit
@@ -91,6 +91,7 @@ class TrackShow extends React.Component {
           </section>
         </header>
 
+        <button onClick={() => this.testWindow()}> Click me </button>
 
         <ProtectedRoute path="/tracks/:trackId/edit/info" component={ EditTrackInfoContainer }/>
 
@@ -110,4 +111,7 @@ class TrackShow extends React.Component {
 export default TrackShow;
 
 //TODO: DELETE THIS LATER, WAS JUST TESTING HOW TO USE THIS FUNCTION
-// <button onClick={() => this.testWindow()}> Click me </button>
+
+//strat
+//add class to selected annotation after it is successfully saved
+//this class will make the paragraph into a link
