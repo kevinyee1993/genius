@@ -14,7 +14,7 @@
 
 class Annotation < ApplicationRecord
   validates :body, :author_id, :track_id, :start_idx, :end_idx, presence: true
-  validates :author_id, :track_id, :start_idx, :end_idx, uniqueness: true
+  validates :start_idx, :end_idx, uniqueness: true
 
   belongs_to :track,
     foreign_key: :track_id,
