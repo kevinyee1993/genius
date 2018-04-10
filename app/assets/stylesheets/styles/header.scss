@@ -11,6 +11,8 @@
     font-weight: bold;
     font-size: 23px;
     letter-spacing: 7px;
+    position: absolute;
+    left: 45%;
 }
 
 .searchbar {
@@ -53,4 +55,12 @@ button:hover {
   transition-duration: 0.1s;
   transition-timing-function: initial;
   transition-delay: initial;
+}
+
+.header-name {
+  padding-left: 10px;
+}
+
+.header-button {
+  padding-left: 10px;
 }
