@@ -38,7 +38,7 @@ const App = () => (
 
     <Navbar />
 
-    <DummyStories />
+    <Route exact path='/' component={ DummyStories } />
 
     <Switch>
       <Route path="/tracks/:trackId" component={ TrackShowContainer } />

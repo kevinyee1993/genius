@@ -52,6 +52,16 @@
     font-size: 15px;
     padding: 21px 17px;
     background-color: white;
+    white-space: pre-line;
+}
+
+.track-lyrics a {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.test-paragraph {
+  white-space: pre-line;
 }
 
 // .track-lyrics {
