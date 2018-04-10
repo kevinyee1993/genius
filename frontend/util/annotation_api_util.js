@@ -20,17 +20,17 @@ export const createAnnotation = (trackId, annotation) => (
   })
 );
 
-export const updateAnnotation = (trackId, annotation) => (
+export const updateAnnotation = ({ annotation }) => (
   $.ajax({
     method: 'PATCH',
-    url: `api/tracks/${trackId}/annotations/${annotation.id}`,
+    url: `api/tracks/${annotation.track_id}/annotations/${annotation.id}`,
     data: { annotation }
   })
 );
 
-export const deleteAnnotation = (trackId, annotationId) => (
+export const deleteAnnotation = ( {annotation} ) => (
   $.ajax({
     method: 'DELETE',
-    url: `api/tracks/${trackId}/annotations/${annotationId}`,
+    url: `api/tracks/${annotation.track_id}/annotations/${annotation.id}`,
   })
 );
