@@ -22,6 +22,10 @@ class User < ApplicationRecord
     foreign_key: :author_id,
     class_name: 'Track'
 
+  has_many :annotations,
+    foreign_key: :author_id,
+    class_name: 'Annotation'
+
   attr_reader :password
 
   def password=(password)

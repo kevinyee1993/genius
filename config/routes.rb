@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
     resources :tracks, only: [:index, :show]
 
+    resources :tracks do
+      resources :annotations, only: [:create, :show, :update, :destroy]
+    end
+
     resource :session, only: [:create, :destroy]
   end
 
