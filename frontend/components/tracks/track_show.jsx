@@ -18,24 +18,20 @@ class TrackShow extends React.Component {
     super(props);
   }
 
-//TODO: something might be wrong here because after refreshing,
-//the page becomes empty and the state resets
   componentDidMount() {
     this.props.fetchAllTracks();
     this.props.fetchSingleTrack(this.props.match.params.trackId);
   }
-
-
-  //MAYBE PUT THIS BACK IN LATER????!?
-  //if the next url id is not equal to the current url id,
-  //re-render the page with the new information
-
   componentWillReceiveProps(nextProps) {
     if(this.props.match.params.trackId != nextProps.match.params.trackId) {
       this.props.fetchSingleTrack(nextProps.match.params.trackId);
     }
   }
 
+  //TODO: DELETE THIS, WAS JUST TESTING HOW TO TEST window.getSelection()
+  // testWindow() {
+  //   console.log(window.getSelection());
+  // }
 
 
   //here check if you are on the edit lyrics page and if you are, set the edit
@@ -95,6 +91,7 @@ class TrackShow extends React.Component {
           </section>
         </header>
 
+
         <ProtectedRoute path="/tracks/:trackId/edit/info" component={ EditTrackInfoContainer }/>
 
 
@@ -102,6 +99,7 @@ class TrackShow extends React.Component {
           <ProtectedRoute path="/tracks/:trackId/edit/lyrics" component={ EditTrackLyricsContainer } />
           <Route path="/tracks/:trackId/" component={ LyricsContainer } />
         </Switch>
+
     </div>
     );
 
@@ -110,3 +108,6 @@ class TrackShow extends React.Component {
 }
 
 export default TrackShow;
+
+//TODO: DELETE THIS LATER, WAS JUST TESTING HOW TO USE THIS FUNCTION
+// <button onClick={() => this.testWindow()}> Click me </button>
