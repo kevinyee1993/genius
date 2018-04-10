@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 class Lyrics extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      showLink: false
+    };
+
   }
 
   componentDidMount() {
@@ -22,9 +27,16 @@ class Lyrics extends React.Component {
   //   }
   // }
 
-mouseUp() {
+//want this function to open up a start annotation button on the side
+//which can then redirect to an annotation form
+//this function should create or display button
+//what if there is always a button somewhere next to the text (depending on where the selection was made)
+//this button has a class of hidden
+//after you make this selection you change that button's class to a class that displays it
+selectionMade() {
   if(window.getSelection().toString().length > 1) {
     console.log(window.getSelection());
+    this.setState({ showLink: true });
   }
 }
 
@@ -42,6 +54,15 @@ mouseUp() {
         </div>);
       }
 
+
+      //ok got this working, now need to get it to link to annotation component and also disappear accordingly
+      let annotationLink;
+
+      if(this.state.showLink) {
+        annotationLink = (<Link to="/">Annotate Lyric</Link>);
+      } else {
+        annotationLink = "";
+      }
       // <button onClick={() => this.mouseUp()}>Click me to make a link!</button>
 
       //may not need contentEditable if you figure out how to do
@@ -50,7 +71,9 @@ mouseUp() {
       <div>
         { editButtons }
 
-        <p className="track-lyrics" onMouseUp={ () => this.mouseUp() }>
+        { annotationLink }
+
+        <p className="track-lyrics" onMouseUp={ () => this.selectionMade() }>
           {this.props.track.lyrics}
         </p>
 
