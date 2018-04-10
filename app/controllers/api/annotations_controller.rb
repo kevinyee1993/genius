@@ -1,4 +1,11 @@
 class Api::AnnotationsController < ApplicationController
+
+  def index
+    track_id = params[:track_id]
+    @track = Track.find_by(id: track_id.to_i)
+    @annotations = @track.annotations
+  end
+
   def show
     @annotation = Annotation.find(params[:id])
   end

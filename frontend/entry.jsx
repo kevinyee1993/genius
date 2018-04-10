@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
-//just testing this
 import { login, clearErrors } from './actions/session_actions';
 import { receiveCurrentUser } from './actions/session_actions';
 import { fetchAllTracks, fetchSingleTrack } from './util/track_api_util';
 import { receiveSingleTrack, receiveAllTracks, updateTrack } from './actions/track_actions';
+
+//just testing this
+import { fetchAllAnnotations, fetchAnnotation, createAnnotation, updateAnnotation, deleteAnnotation}
+from './actions/annotation_actions';
 //end of testing imports
 
 
@@ -32,6 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
       window.fetchAllTracks = fetchAllTracks;
       window.fetchSingleTrack = fetchSingleTrack;
       // window.updateTrack = updateTrack;
+
+    //annotation api util tests
+      window.fetchAllAnnotations = fetchAllAnnotations;
+      window.fetchAnnotation = fetchAnnotation;
+      window.createAnnotation = createAnnotation;
+      window.updateAnnotation = updateAnnotation;
+      window.deleteAnnotation = deleteAnnotation;
+    //end annotation api util tests
+
 
     //action tests
       window.receiveSingleTrack = receiveSingleTrack;
