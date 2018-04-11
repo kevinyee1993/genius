@@ -5,11 +5,11 @@ class Api::TrackCommentsController < ApplicationController
     @comments = @track.comments
   end
 
-  def show
-    track_id = params[:track_id]
-    currentTrack = Track.find_by(id: track_id)
-    @comment = currentTrack.comments[params[:id].to_i - 1]
-  end
+  # def show
+  #   track_id = params[:track_id]
+  #   currentTrack = Track.find_by(id: track_id)
+  #   @comment = currentTrack.comments[params[:id].to_i - 1]
+  # end
 
   def create
     @comment = TrackComment.new(track_comment_params)
@@ -26,13 +26,12 @@ class Api::TrackCommentsController < ApplicationController
 
 #test this later
   def update
-    track_id = params[:track_id]
-    current_track = current_user.tracks.find(params[:id])
-    @comment = current_track.comments.find(params[:id].to_i - 1)
-
-    if @comment.update_attributes(comment_params)
-      render :show
+    @comments = TrackComment.all
+    @comment = TrackComment.find_by(id: params[:id])
+    if @comment.update(track_comment_params)
+      render :index
     else
+      debugger
       render json: @comment.errors.full_messages, status: 422
     end
   end

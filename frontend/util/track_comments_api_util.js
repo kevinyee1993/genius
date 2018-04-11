@@ -24,11 +24,11 @@ export const createTrackComment = (trackId, comment ) => (
 
 
 //need to test updateTrackComment and destroyTrackComment works correctly
-export const updateTrackComment = (comment) => (
+export const updateTrackComment = (track_comment) => (
   $.ajax({
     method: 'PATCH',
-    url: `api/track_comments/${ comment.id }`,
-    data: { comment }
+    url: `api/track_comments/${ track_comment.id }`,
+    data: { track_comment }
   })
 );
 
