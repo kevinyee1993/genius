@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
+
+import CreateAnnotationFormContainer from '../annotations/create_annotation_form_container';
 
 class Lyrics extends React.Component {
   constructor(props) {
@@ -58,6 +60,10 @@ selectionMade() {
       //ok got this working, now need to get it to link to annotation component and also disappear accordingly
       let annotationLink;
 
+      let startIdx = window.getSelection().anchorOffset;
+      let endIdx  = window.getSelection().focusOffset;
+      let selectionText = window.getSelection().toString();
+
       if(this.state.showLink) {
         annotationLink = (<Link to={`/tracks/${this.props.track.id}/annotations/new`}
           onClick={ () => this.setState({ showLink: false }) }>Annotate Lyric</Link>);
@@ -73,6 +79,9 @@ selectionMade() {
         { editButtons }
 
         { annotationLink }
+
+      <Route path="/tracks/:trackId/annotations/new"
+        render={ () => <CreateAnnotationFormContainer startIdx = {startIdx} endIdx = { endIdx } selectionText={ selectionText } /> }/>
 
         <p className="track-lyrics" onMouseUp={ () => this.selectionMade() }>
           {this.props.track.lyrics}

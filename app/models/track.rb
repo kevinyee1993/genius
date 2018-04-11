@@ -24,4 +24,21 @@ class Track < ApplicationRecord
   has_many :annotations,
     foreign_key: :track_id,
     class_name: 'Annotation'
+
+  # def parse_text(id)
+  #   ans_arr = []
+  #   i = 0
+  #   until we have no more lyrics characters
+  #   Track.find(id).lyrics.char do |ch|
+  #     #check are you associated with an annotation?
+  #       # if you are, create this el
+  #         Annotation.find_by()
+  #         ans_arr << [start_idx, end_idx, true]
+  #         i = end_idx
+  #       # if you arent, create this el
+  #         ans_arr << [start_idx, end_idx, false]
+  #   end
+  # end
+  # ans_arr
+  # #added to your json builder so your front end sees this array
 end

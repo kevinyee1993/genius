@@ -6,9 +6,10 @@ import { createAnnotation } from '../../actions/annotation_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const annotation = {body: ""};
+  // const annotation = state.entities.annotation[ownProps.match.params.annotationId] || defaultAnnotation;
   const formType = 'Create Annotation';
 
-  return { annotation, formType };
+  return { annotation, errors: state.errors.annotation };
 };
 
 const mapDispatchToProps = (dispatch) => {

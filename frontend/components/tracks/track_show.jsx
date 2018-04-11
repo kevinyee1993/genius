@@ -95,7 +95,7 @@ class TrackShow extends React.Component {
           </section>
         </header>
 
-        <Route path="/tracks/:trackId/annotations/new" component={ CreateAnnotationFormContainer }/>
+
 
         <ProtectedRoute path="/tracks/:trackId/edit/info" component={ EditTrackInfoContainer }/>
 
