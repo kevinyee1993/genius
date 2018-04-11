@@ -12,8 +12,9 @@ import { receiveSingleTrack, receiveAllTracks, updateTrack } from './actions/tra
 import { fetchAllAnnotations, fetchAnnotation, createAnnotation, updateAnnotation, deleteAnnotation}
 from './actions/annotation_actions';
 
-import { fetchTrackComments, createTrackComment,
-updateTrackComment, destroyTrackComment } from './util/track_comments_api_util';
+import { fetchTrackComments, createTrackComment, updateTrackComment, destroyTrackComment }
+from './actions/track_comment_actions';
+// import { createTrackComment } from './util/track_comments_api_util';
 
 //end of testing imports
 
@@ -36,27 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
       window.dispatch = store.dispatch;
 
     //api util tests
-      window.fetchAllTracks = fetchAllTracks;
-      window.fetchSingleTrack = fetchSingleTrack;
       // window.updateTrack = updateTrack;
 
     //annotation api util tests
-      window.fetchAllAnnotations = fetchAllAnnotations;
-      window.fetchAnnotation = fetchAnnotation;
-      window.createAnnotation = createAnnotation;
-      window.updateAnnotation = updateAnnotation;
-      window.deleteAnnotation = deleteAnnotation;
-      window.fetchTrackComments = fetchTrackComments;
-      window.createTrackComment = createTrackComment;
-      window.updateTrackComment = updateTrackComment;
-      window.destroyTrackComment = destroyTrackComment;
+
     //end annotation api util tests
 
 
-    //action tests
-      window.receiveSingleTrack = receiveSingleTrack;
-      window.receiveAllTracks = receiveAllTracks;
-      window.updateTrack = updateTrack;
+    //action tests track comments
+      window.fetchTrackComments = fetchTrackComments;
+      window.createTrackComment = createTrackComment;
+      window.updateTrackCommment = updateTrackComment;
+      window.destroyTrackComment = destroyTrackComment;
 
 //END TESTS
 

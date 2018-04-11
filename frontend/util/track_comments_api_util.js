@@ -14,11 +14,11 @@ export const fetchTrackComments = (trackId) => (
 //   })
 // );
 
-export const createTrackComment = (trackId, comment ) => (
+export const createTrackComment = (trackId, track_comment ) => (
   $.ajax({
     method: 'POST',
     url: `api/tracks/${ trackId }/track_comments`,
-    data: comment
+    data: { track_comment }
   })
 );
 
