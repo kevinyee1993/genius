@@ -3,7 +3,8 @@ import CommentIndexContainer from './comment_index';
 import { fetchTrackComments } from '../../actions/track_comment_actions';
 
 const mapStateToProps = (state) => ({
-  comments: Object.values(state.entities.trackComments)
+  comments: Object.values(state.entities.trackComments),
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({

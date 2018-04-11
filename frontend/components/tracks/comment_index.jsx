@@ -12,11 +12,25 @@ class CommentIndex extends React.Component {
   }
 
   render() {
+
+
     const comments = this.props.comments.map(comment => {
+      let editAndDeleteButtons;
+
+      if(this.props.currentUser && this.props.currentUser.id === comment.author_id) {
+        editAndDeleteButtons = (
+          <div>
+            <button>Edit</button>
+            <button>Delete</button>
+          </div>
+        );
+      }
+
       return(
         <ul className="comment-entry">
           <li> {comment.author.username} </li>
           <li> {comment.body} </li>
+          { editAndDeleteButtons }
           <br></br>
         </ul>
       );
