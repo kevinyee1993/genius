@@ -99,7 +99,7 @@ class TrackShow extends React.Component {
           <Route path="/tracks/:trackId/" component={ LyricsContainer } />
         </Switch>
 
-        <Route exact path="/tracks/:trackId" component={ CommentIndexContainer } />
+        <Route path="/tracks/:trackId" component={ CommentIndexContainer } />
 
     </div>
     );
