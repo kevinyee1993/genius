@@ -23,6 +23,7 @@ class CommentPostForm extends React.Component {
     e.preventDefault();
     console.log(this.props.match.params.trackId);
     this.props.createTrackComment(this.props.match.params.trackId, this.state);
+    this.setState({body: ""});
   }
 
 
