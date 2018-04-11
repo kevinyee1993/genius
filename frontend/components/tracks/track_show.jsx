@@ -11,6 +11,7 @@ import { AuthRoute, ProtectedRoute } from '../../util/route_util';
 import LyricsContainer from './lyrics_container';
 import EditTrackLyricsContainer from './edit_track_lyrics_container';
 import EditTrackInfoContainer from './edit_track_info_container';
+import CommentIndexContainer from './comment_index_container';
 
 //test code here
 import CreateAnnotationFormContainer from '../annotations/create_annotation_form_container';
@@ -70,12 +71,6 @@ class TrackShow extends React.Component {
     let editLyricLink;
     let editInfoLink;
 
-    //need a way to check if the current user ID is equal to the
-    //author id of the current track
-    // if(this.props.track.author_id) {
-    //   editLyricLink = (<Link to={`/tracks/${this.props.track.id}/edit/lyrics`}>Edit Lyrics</Link>);
-    // }
-
     return(
       <div>
         <header className="track-show-header" style={ style }>
@@ -99,11 +94,12 @@ class TrackShow extends React.Component {
 
         <ProtectedRoute path="/tracks/:trackId/edit/info" component={ EditTrackInfoContainer }/>
 
-
         <Switch>
           <ProtectedRoute path="/tracks/:trackId/edit/lyrics" component={ EditTrackLyricsContainer } />
           <Route path="/tracks/:trackId/" component={ LyricsContainer } />
         </Switch>
+
+        <Route exact path="/tracks/:trackId" component={ CommentIndexContainer } />
 
     </div>
     );

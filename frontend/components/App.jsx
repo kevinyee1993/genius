@@ -15,6 +15,8 @@ import EditTrackInfoContainer from './tracks/edit_track_info_container';
 import DummyStories from './dummy_stories/dummy_stories';
 //test end!
 
+import CommentIndexContainer from './tracks/comment_index_container';
+
 //dummy components for now
 import Navbar from './navbar/navbar';
 //end of dummy components
