@@ -14,6 +14,7 @@ class CommentIndex extends React.Component {
   render() {
 
 
+//now need to get these buttons to do stuff yadadamean
     const comments = this.props.comments.map(comment => {
       let editAndDeleteButtons;
 
@@ -21,7 +22,7 @@ class CommentIndex extends React.Component {
         editAndDeleteButtons = (
           <div>
             <button>Edit</button>
-            <button>Delete</button>
+            <button onClick={ () => this.props.destroyTrackComment(comment.id) }>Delete</button>
           </div>
         );
       }
