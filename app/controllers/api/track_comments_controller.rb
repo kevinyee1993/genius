@@ -8,7 +8,6 @@ class Api::TrackCommentsController < ApplicationController
   def show
     track_id = params[:track_id]
     currentTrack = Track.find_by(id: track_id)
-    # @comment = currentTrack.comments.find_by(id: params[:id])
     @comment = currentTrack.comments[params[:id].to_i - 1]
   end
 

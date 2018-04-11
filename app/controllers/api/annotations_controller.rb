@@ -7,7 +7,11 @@ class Api::AnnotationsController < ApplicationController
   end
 
   def show
-    @annotation = Annotation.find(params[:id])
+    #Test this out later to make sure your annotatations are working
+    track_id = params[:track_id]
+    currentTrack = Track.find_by(id: track_id)
+    @annotation = currentTrack.annotations[params[:id].to_i - 1]
+    # @annotation = Annotation.find(params[:id])
   end
 
 #need to manually enter the track id and the user id
