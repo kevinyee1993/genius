@@ -12,8 +12,9 @@ import { receiveSingleTrack, receiveAllTracks, updateTrack } from './actions/tra
 import { fetchAllAnnotations, fetchAnnotation, createAnnotation, updateAnnotation, deleteAnnotation}
 from './actions/annotation_actions';
 
-import { fetchTrackComments, fetchTrackComment, createTrackComment,
-updateTrackComment } from './util/track_comments_api_util';
+import { fetchTrackComments, createTrackComment,
+updateTrackComment, destroyTrackComment } from './util/track_comments_api_util';
+
 //end of testing imports
 
 
@@ -46,9 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
       window.updateAnnotation = updateAnnotation;
       window.deleteAnnotation = deleteAnnotation;
       window.fetchTrackComments = fetchTrackComments;
-      window.fetchTrackComment = fetchTrackComment;
       window.createTrackComment = createTrackComment;
       window.updateTrackComment = updateTrackComment;
+      window.destroyTrackComment = destroyTrackComment;
     //end annotation api util tests
 
 

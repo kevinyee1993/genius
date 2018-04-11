@@ -38,9 +38,7 @@ class Api::TrackCommentsController < ApplicationController
   end
 
   def destroy
-    track_id = params[:track_id]
-    current_track = current_user.tracks.find(params[:id])
-    @comment = current_track.comments.find(params[:id].to_i - 1)
+    @comment = TrackComment.find(params[:id])
 
     if @comment.destroy
       render :show

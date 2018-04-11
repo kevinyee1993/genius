@@ -7,12 +7,12 @@ export const fetchTrackComments = (trackId) => (
   })
 );
 
-export const fetchTrackComment = (trackId, commentId) => (
-  $.ajax({
-    method: 'GET',
-    url: `api/tracks/${ trackId }/track_comments/${ commentId }`
-  })
-);
+// export const fetchTrackComment = (trackId, commentId) => (
+//   $.ajax({
+//     method: 'GET',
+//     url: `api/tracks/${ trackId }/track_comments/${ commentId }`
+//   })
+// );
 
 export const createTrackComment = (trackId, comment ) => (
   $.ajax({
@@ -27,14 +27,14 @@ export const createTrackComment = (trackId, comment ) => (
 export const updateTrackComment = (comment) => (
   $.ajax({
     method: 'PATCH',
-    url: `api/tracks/${ comment.track.id }/track_comments/${ comment.id }`,
+    url: `api/track_comments/${ comment.id }`,
     data: { comment }
   })
 );
 
-export const destroyTrackComment = (trackId, commentId) => (
+export const destroyTrackComment = (commentId) => (
   $.ajax({
     method: 'DELETE',
-    url: `api/tracks/${ trackId }/track_comments/${ commentId }`
+    url: `api/track_comments/${ commentId }`
   })
 );

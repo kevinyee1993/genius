@@ -10,12 +10,16 @@ Rails.application.routes.draw do
     resources :tracks, only: [:index, :show]
 
     resources :tracks do
-      resources :annotations, only: [:index, :create, :show, :update, :destroy]
+      resources :annotations, only: [:create]
     end
 
+    resources :annotations, only: [:index, :show, :update, :destroy]
+
     resources :tracks do
-      resources :track_comments, only: [:index, :show, :create, :update, :destroy]
+      resources :track_comments, only: [:create, :index]
     end
+
+    resources :track_comments, only: [:update, :destroy]
 
     resource :session, only: [:create, :destroy]
   end

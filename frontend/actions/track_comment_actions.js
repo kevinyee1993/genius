@@ -17,7 +17,7 @@ export const receiveAllComments = (comments) => ({
 });
 
 export const removeComment = commentId => ({
-  type: REMOVE_POST,
+  type: REMOVE_COMMENT,
   commentId
 });
 
@@ -35,13 +35,13 @@ export const fetchTrackComments = (trackId) => dispatch => (
   ))
 );
 
-export const fetchTrackComment = (trackId, commentId) => dispatch => (
-  APIUtil.fetchTrackComment(trackId, commentId).then(comment => (
-    dispatch(receiveSingleComment(comment))
-  ), err => (
-    dispatch(receiveErrors(err.responseJSON))
-  ))
-);
+// export const fetchTrackComment = (trackId, commentId) => dispatch => (
+//   APIUtil.fetchTrackComment(trackId, commentId).then(comment => (
+//     dispatch(receiveSingleComment(comment))
+//   ), err => (
+//     dispatch(receiveErrors(err.responseJSON))
+//   ))
+// );
 
 export const createTrackComment = (trackId, comment) => dispatch => (
   APIUtil.createTrackComment(trackId, comment).then(comment => (
@@ -59,8 +59,8 @@ export const updateTrackComment = (comment) => dispatch => (
   ))
 );
 
-export const destroyTrackComment = (trackId, commentId) => dispatch => (
-  APIUtil.destroyTrackComment(trackId, commentId).then(comment => (
+export const destroyTrackComment = (commentId) => dispatch => (
+  APIUtil.destroyTrackComment(commentId).then(comment => (
     dispatch(removeComment(commentId))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))
