@@ -28,13 +28,13 @@ export const updateTrackComment = (comment) => (
   $.ajax({
     method: 'PATCH',
     url: `api/tracks/${ comment.track.id }/track_comments/${ comment.id }`,
-    data: comment
+    data: { comment }
   })
 );
 
-export const destroyTrackComment = (comment) => (
+export const destroyTrackComment = (trackId, commentId) => (
   $.ajax({
     method: 'DELETE',
-    url: `api/tracks/${ comment.track.id }/track_comments/${ comment.id }`
+    url: `api/tracks/${ trackId }/track_comments/${ commentId }`
   })
 );
