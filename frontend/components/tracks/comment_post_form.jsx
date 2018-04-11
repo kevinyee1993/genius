@@ -21,7 +21,8 @@ class CommentPostForm extends React.Component {
   //hard code this, but this is working right now
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createTrackComment(1, {body: "Hello form test2asdfads"});
+    console.log(this.props.match.params.trackId);
+    this.props.createTrackComment(this.props.match.params.trackId, this.state);
   }
 
 
