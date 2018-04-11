@@ -26,6 +26,10 @@ class User < ApplicationRecord
     foreign_key: :author_id,
     class_name: 'Annotation'
 
+  has_many :track_comment_upvotes,
+    foreign_key: :user_id,
+    class_name: 'TrackCommentUpvote'
+
   attr_reader :password
 
   def password=(password)

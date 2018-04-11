@@ -25,6 +25,10 @@ class Track < ApplicationRecord
     foreign_key: :track_id,
     class_name: 'Annotation'
 
+  has_many :comments,
+    foreign_key: :track_id,
+    class_name: 'TrackComment'
+
   # def parse_text(id)
   #   ans_arr = []
   #   i = 0
