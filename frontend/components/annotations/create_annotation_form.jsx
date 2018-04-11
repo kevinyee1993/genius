@@ -28,14 +28,13 @@ class CreateAnnotationForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createAnnotation(this.state);
-    this.props.history.push('/');
+    this.props.createAnnotation(1,this.state);
   }
   render() {
 
     return(
         <div>
-          <input type="text"></input>
+          <input type="text" autofocus></input>
 
           <input type="hidden"
             value = { this.props.startIdx }>
@@ -44,10 +43,6 @@ class CreateAnnotationForm extends React.Component {
           <input type="hidden"
             value = { this.props.endIdx }>
           </input>
-
-          <input type="hidden"
-            value = { this.props.selectionText }
-            />
 
           <input type="submit" />
         </div>
