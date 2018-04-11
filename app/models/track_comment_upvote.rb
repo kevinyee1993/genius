@@ -1,0 +1,2 @@
+class TrackCommentUpvote < ApplicationRecord
+end

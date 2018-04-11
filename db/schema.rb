@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180410222910) do
+ActiveRecord::Schema.define(version: 20180411074104) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,26 @@ ActiveRecord::Schema.define(version: 20180410222910) do
     t.index ["end_idx"], name: "index_annotations_on_end_idx", unique: true
     t.index ["start_idx"], name: "index_annotations_on_start_idx", unique: true
     t.index ["track_id"], name: "index_annotations_on_track_id"
+  end
+
+  create_table "track_comment_upvotes", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "track_comment_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "track_comment_id"], name: "index_track_comment_upvotes_on_user_id_and_track_comment_id", unique: true
+  end
+
+  create_table "track_comments", force: :cascade do |t|
+    t.text "body", null: false
+    t.integer "track_id", null: false
+    t.integer "author_id", null: false
+    t.integer "parent_comment_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_track_comments_on_author_id"
+    t.index ["parent_comment_id"], name: "index_track_comments_on_parent_comment_id"
+    t.index ["track_id"], name: "index_track_comments_on_track_id"
   end
 
   create_table "tracks", force: :cascade do |t|
