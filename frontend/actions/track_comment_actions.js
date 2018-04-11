@@ -2,7 +2,7 @@ import * as APIUtil from '../util/track_comments_api_util';
 
 export const RECEIVE_SINGLE_COMMENT = 'RECEIVE_SINGLE_COMMENT';
 export const RECEIVE_ALL_COMMENTS = 'RECEIVE_ALL_COMMENTS';
-export const REMOVE_POST = 'REMOVE_POST';
+export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 export const RECEIVE_COMMENT_ERRORS = 'RECEIVE_COMMENT_ERRORS';
 
 
