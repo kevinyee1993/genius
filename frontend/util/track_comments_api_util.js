@@ -18,6 +18,23 @@ export const createTrackComment = (trackId, comment ) => (
   $.ajax({
     method: 'POST',
     url: `api/tracks/${ trackId }/track_comments`,
-    data: comment 
+    data: comment
+  })
+);
+
+
+//need to test updateTrackComment and destroyTrackComment works correctly
+export const updateTrackComment = (comment) => (
+  $.ajax({
+    method: 'PATCH',
+    url: `api/tracks/${ comment.track.id }/track_comments/${ comment.id }`,
+    data: comment
+  })
+);
+
+export const destroyTrackComment = (comment) => (
+  $.ajax({
+    method: 'DELETE',
+    url: `api/tracks/${ comment.track.id }/track_comments/${ comment.id }`
   })
 );
