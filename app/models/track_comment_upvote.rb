@@ -11,7 +11,7 @@
 
 class TrackCommentUpvote < ApplicationRecord
   validates :user_id, :track_comment_id, :vote_value, presence: true
-  validates :user_id, uniqueness: { scope: [:track_comment_id] }
+  validates :user_id, uniqueness: { scope: :track_comment_id }
   validates :vote_value, inclusion: { in: [1, -1] }
 
   belongs_to :track,

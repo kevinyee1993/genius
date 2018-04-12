@@ -11,11 +11,14 @@
 #
 
 class CommentUpvote < ApplicationRecord
-  # validates :user_id, :comment_id, :vote_value, presence: true
-  # validates :vote_value, inclusion: { in: [1, -1] }
-  #
-  # belongs_to :user,
-  #   foreign_key: :user_id,
-  #   class_name: 'User'
-  # NOT GOING TO DELETE THIS FOR NOW BUT IT'S GONE FROM THE SCHEMA
+  validates :user_id, :comment_id, :vote_value, presence: true
+  validates :vote_value, inclusion: { in: [1, -1] }
+
+  belongs_to :user,
+    foreign_key: :user_id,
+    class_name: 'User'
+
+  belongs_to :comment,
+    foreign_key: :comment_id,
+    class_name: 'TrackComment'
 end

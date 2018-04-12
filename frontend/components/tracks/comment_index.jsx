@@ -14,29 +14,6 @@ class CommentIndex extends React.Component {
     this.props.fetchTrackComments(this.props.match.params.trackId);
   }
 
-//this was within the comments map, plug it in later if you fuck up
-
-// let editAndDeleteButtons;
-// if(this.props.currentUser && this.props.currentUser.id === comment.author_id) {
-//   editAndDeleteButtons = (
-//     <div>
-//       <button>Edit</button>
-//       <button onClick={ () => this.props.destroyTrackComment(comment.id) }>Delete</button>
-//     </div>
-//   );
-// }
-//
-// return(
-//   <ul className="comment-entry">
-//     <li> {comment.author.username} </li>
-//     <li> {comment.body} </li>
-//     { editAndDeleteButtons }
-//     <br></br>
-//   </ul>
-// );
-
-//now need to get these buttons to do stuff yadadamean
-// <CommentIndexItemContainer comment={ comment }/>
 
 render() {
 

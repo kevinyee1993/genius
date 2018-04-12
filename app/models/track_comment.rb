@@ -19,8 +19,8 @@ class TrackComment < ApplicationRecord
     class_name: 'Track'
 
   has_many :upvotes,
-    foreign_key: :track_comment_id,
-    class_name: 'TrackCommentUpvote'
+    foreign_key: :comment_id,
+    class_name: 'CommentUpvote'
 
   belongs_to :author,
     foreign_key: :author_id,

@@ -30,9 +30,9 @@ class User < ApplicationRecord
     foreign_key: :author_id,
     class_name: 'TrackComment'
 
-  has_many :track_comment_voted,
+  has_many :track_comments_voted,
     foreign_key: :user_id,
-    class_name: 'TrackCommentUpvote'
+    class_name: 'CommentUpvote'
 
   attr_reader :password
 
