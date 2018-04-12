@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class CommentIndexItem extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class CommentIndexItem extends React.Component {
     if(this.props.currentUser && this.props.currentUser.id === this.props.comment.author_id) {
       editAndDeleteButtons = (
         <div>
-          <button>Edit</button>
+          <Link to={`/tracks/${this.props.trackId}/comments/${ this.props.comment.id }/edit`}> Edit </Link>
           <button onClick={ () => this.props.destroyTrackComment(this.props.comment.id) }>Delete</button>
         </div>
       );

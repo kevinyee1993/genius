@@ -1,7 +1,9 @@
 import React from 'react';
 import CommentPostFormContainer from './comment_post_form_container';
 import CommentIndexItemContainer from './comment_index_item_container';
-import { Route, Link } from 'react-router-dom';
+import CommentEditFormContainer from './comment_edit_form/comment_edit_form_container';
+
+import { Route, Link, Switch } from 'react-router-dom';
 
 class CommentIndex extends React.Component {
   constructor(props) {
@@ -33,11 +35,18 @@ class CommentIndex extends React.Component {
 //   </ul>
 // );
 
-  render() {
 //now need to get these buttons to do stuff yadadamean
+// <CommentIndexItemContainer comment={ comment }/>
+
+render() {
+
     const comments = this.props.comments.map(comment => {
+
       return (
-        <CommentIndexItemContainer comment={ comment }/>
+        <Switch>
+          <Route path={`/tracks/:trackId/comments/${ comment.id }/edit`} render={ () => < CommentEditFormContainer /> } />
+          <Route path={`/tracks/:trackId`} render={ () => <CommentIndexItemContainer comment={ comment } trackId={ this.props.match.params.trackId }/> } />
+        </Switch>
       );
     });
 
