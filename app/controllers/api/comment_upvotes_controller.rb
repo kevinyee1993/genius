@@ -24,7 +24,7 @@ class Api::CommentUpvotesController < ApplicationController
 
 
     if @upvote.destroy
-      #don't need to render anything if you destroy
+      render 'api/track_comments/show'
     else
       render json: @upvote.errors.full_messages, status: 422
     end

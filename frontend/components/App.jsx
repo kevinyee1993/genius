@@ -29,7 +29,7 @@ const App = () => (
 
     <header className="main-header">
 
-      <p className="searchbar">Search lyrics & more</p>
+      <p className="searchbar">This is not a search bar</p>
 
       <Link to={`/`}>
         <p className="logo">CONVO</p>
