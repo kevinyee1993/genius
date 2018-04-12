@@ -34,6 +34,7 @@ class CommentPostForm extends React.Component {
 
           <textarea
             className="comment-form-input"
+            placeholder="Add a comment"
             value={this.state.body}
             onChange = { this.update('body') }
           />

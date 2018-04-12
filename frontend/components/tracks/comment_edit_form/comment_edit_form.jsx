@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 // import { fetchTrackComments } from '../../../actions/track_comment_actions';
 class CommentEditForm extends React.Component {
@@ -21,7 +21,6 @@ class CommentEditForm extends React.Component {
 //redirect to the track show page after this!!
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
     this.props.updateTrackComment(this.state).then(() => this.props.history.push(`/tracks/${this.props.trackId}`));
   }
 
@@ -29,14 +28,19 @@ class CommentEditForm extends React.Component {
     console.log(this.props);
     return(
       <div>
-      <form onSubmit={ this.handleSubmit }>
+      <form className="edit-comment-form" onSubmit={ this.handleSubmit }>
+
+        <h1> {this.props.comment.author.username} </h1>
 
         <textarea
           value={ this.state.body }
           onChange = { this.update('body') }
           />
 
-        <input type="submit" value="Update"/>
+        <div className="edit-form-buttons">
+          <input type="submit" value="Update"/>
+          <Link to={`/tracks/${this.props.trackId}`}>Close</Link>
+        </div>
 
       </form>
     </div>
