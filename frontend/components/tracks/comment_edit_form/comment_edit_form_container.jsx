@@ -3,7 +3,6 @@ import CommentEditForm from './comment_edit_form';
 import { updateTrackComment } from '../../../actions/track_comment_actions';
 import { withRouter } from 'react-router';
 
-//not sure if I need any state props here..
 const mapStateToProps = (state) => ({
 
 });
