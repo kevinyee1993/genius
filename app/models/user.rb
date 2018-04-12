@@ -31,6 +31,7 @@ class User < ApplicationRecord
     class_name: 'TrackComment'
 
   has_many :track_comments_voted,
+    dependent: :destroy,
     foreign_key: :user_id,
     class_name: 'CommentUpvote'
 

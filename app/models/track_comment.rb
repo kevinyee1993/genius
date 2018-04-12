@@ -19,10 +19,22 @@ class TrackComment < ApplicationRecord
     class_name: 'Track'
 
   has_many :upvotes,
+    dependent: :destroy,
     foreign_key: :comment_id,
     class_name: 'CommentUpvote'
 
   belongs_to :author,
     foreign_key: :author_id,
     class_name: 'User'
+
+  def score
+    sum = 0
+
+    upvotes.each do |upvote|
+      sum += upvote[:vote_value]
+    end
+
+    sum
+  end
+  
 end
