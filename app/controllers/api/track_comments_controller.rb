@@ -29,7 +29,7 @@ class Api::TrackCommentsController < ApplicationController
     @comments = TrackComment.all
     @comment = TrackComment.find_by(id: params[:id])
     if @comment.update(track_comment_params)
-      render :index
+      render :show
     else
       debugger
       render json: @comment.errors.full_messages, status: 422

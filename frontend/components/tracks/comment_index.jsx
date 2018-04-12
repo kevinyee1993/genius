@@ -44,7 +44,7 @@ render() {
 
       return (
         <Switch>
-          <Route path={`/tracks/:trackId/comments/${ comment.id }/edit`} render={ () => < CommentEditFormContainer /> } />
+          <Route path={`/tracks/:trackId/comments/${ comment.id }/edit`} render={ () => <CommentEditFormContainer comment={ comment } trackId={ this.props.match.params.trackId }/> } />
           <Route path={`/tracks/:trackId`} render={ () => <CommentIndexItemContainer comment={ comment } trackId={ this.props.match.params.trackId }/> } />
         </Switch>
       );
