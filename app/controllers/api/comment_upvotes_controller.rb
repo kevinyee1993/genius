@@ -21,7 +21,7 @@ class Api::CommentUpvotesController < ApplicationController
 
   def destroy
     @upvote = CommentUpvote.find(params[:id])
-
+    @comment = @upvote.comment
 
     if @upvote.destroy
       render 'api/track_comments/show'
