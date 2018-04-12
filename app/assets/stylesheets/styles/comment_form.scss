@@ -1,0 +1,31 @@
+.comment-form-container {
+  background-color: #F5F5F5;
+  border-bottom: 1px solid #9CA9E4;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.comment-form-input {
+  height: 50px;
+  border: 2px solid #CCCCCC;
+  margin-bottom: 10px;
+}
+
+.comment-form-submit {
+  color: #5DC746;
+  border: 3px solid #5DC746;
+  width: 70px;
+  height: 35px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #F5F5F5;
+  margin-bottom: 10px;
+}
+
+.comment-form-submit:hover {
+  background-color: #D7ECD2;
+}

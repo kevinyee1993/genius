@@ -53,8 +53,6 @@ render() {
     return(
       <div>
         <Route path={`/tracks/:trackId`} component={ CommentPostFormContainer } />
-
-        Hello this is the comment index.  Create and update forms go above here
         { comments.reverse() }
       </div>
     );

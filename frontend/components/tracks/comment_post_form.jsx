@@ -28,17 +28,17 @@ class CommentPostForm extends React.Component {
 
   render() {
     return(
-      <div>
-        <h1> This is the comment form </h1>
+      <div className="comment-form-container">
 
-        <form onSubmit={ this.handleSubmit }>
+        <form className="comment-form" onSubmit={ this.handleSubmit }>
 
           <textarea
+            className="comment-form-input"
             value={this.state.body}
             onChange = { this.update('body') }
           />
 
-        <input type="submit" value="Submit"/>
+        <input type="submit" value="Submit" className="comment-form-submit"/>
 
         </form>
 
