@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentPostFormContainer from './comment_post_form_container';
+import CommentIndexItemContainer from './comment_index_item_container';
 import { Route, Link } from 'react-router-dom';
 
 class CommentIndex extends React.Component {
@@ -11,27 +12,32 @@ class CommentIndex extends React.Component {
     this.props.fetchTrackComments(this.props.match.params.trackId);
   }
 
+//this was within the comments map, plug it in later if you fuck up
+
+// let editAndDeleteButtons;
+// if(this.props.currentUser && this.props.currentUser.id === comment.author_id) {
+//   editAndDeleteButtons = (
+//     <div>
+//       <button>Edit</button>
+//       <button onClick={ () => this.props.destroyTrackComment(comment.id) }>Delete</button>
+//     </div>
+//   );
+// }
+//
+// return(
+//   <ul className="comment-entry">
+//     <li> {comment.author.username} </li>
+//     <li> {comment.body} </li>
+//     { editAndDeleteButtons }
+//     <br></br>
+//   </ul>
+// );
+
   render() {
 //now need to get these buttons to do stuff yadadamean
     const comments = this.props.comments.map(comment => {
-      let editAndDeleteButtons;
-
-      //genius doesn't have editing, will put it back in later
-      if(this.props.currentUser && this.props.currentUser.id === comment.author_id) {
-        editAndDeleteButtons = (
-          <div>
-            <button onClick={ () => this.props.destroyTrackComment(comment.id) }>Delete</button>
-          </div>
-        );
-      }
-
-      return(
-        <ul className="comment-entry">
-          <li> {comment.author.username} </li>
-          <li> {comment.body} </li>
-          { editAndDeleteButtons }
-          <br></br>
-        </ul>
+      return (
+        <CommentIndexItemContainer comment={ comment }/>
       );
     });
 
