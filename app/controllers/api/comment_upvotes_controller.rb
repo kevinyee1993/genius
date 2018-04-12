@@ -1,16 +1,18 @@
 class Api::CommentUpvotesController < ApplicationController
 
+  # def show
+  #   @comment = TrackComment.first
+  #   render 'api/track_comments/show'
+  # end
+
   def create
     @upvote = CommentUpvote.new(upvote_params)
     @upvote.user_id = current_user.id
-    @upvote.comment_id = TrackComment.find_by(id: params[:track_comment_id].to_i)[:id]
+    @comment = TrackComment.find_by(id: params[:track_comment_id].to_i)
+    @upvote.comment_id = @comment[:id]
 
-#not sure if I want to render show or index here
-#do i even need to render anything here..? can just go to comments and call the score
-#put that in the comment json
-#render the comments show??
     if @upvote.save
-      # render :show
+      render 'api/track_comments/show'
     else
       render json: @upvote.errors.full_messages, status: 422
     end
@@ -30,9 +32,10 @@ class Api::CommentUpvotesController < ApplicationController
 
   def update
     @upvote = CommentUpvote.find(params[:id])
+    @comment = @upvote.comment
 
     if @upvote.update(upvote_params)
-      #not sure what to render here
+      render 'api/track_comments/show'
     else
       render json: @upvote.errors.full_messages, status: 422
     end
