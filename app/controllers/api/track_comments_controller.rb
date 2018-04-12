@@ -31,7 +31,6 @@ class Api::TrackCommentsController < ApplicationController
     if @comment.update(track_comment_params)
       render :show
     else
-      debugger
       render json: @comment.errors.full_messages, status: 422
     end
   end

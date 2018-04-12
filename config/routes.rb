@@ -21,6 +21,12 @@ Rails.application.routes.draw do
 
     resources :track_comments, only: [:update, :destroy]
 
+    resources :track_comments do
+      resources :comment_upvotes, only: [:create]
+    end
+
+    resources :comment_upvotes, only: [:destroy, :update]
+
     resource :session, only: [:create, :destroy]
   end
 

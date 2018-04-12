@@ -1,0 +1,2 @@
+module Api::CommentUpvotesHelper
+end
