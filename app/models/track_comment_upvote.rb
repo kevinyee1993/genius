@@ -10,7 +10,8 @@
 #
 
 class TrackCommentUpvote < ApplicationRecord
-  validates :user_id, :track_comment_id, presence: true
+  validates :user_id, :track_comment_id, :vote_value, presence: true
+  validates :vote_value, inclusion: { in: [1, -1] }
 
   belongs_to :track,
     foreign_key: :track_comment_id,

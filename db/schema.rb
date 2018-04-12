@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180411074104) do
+ActiveRecord::Schema.define(version: 20180412013752) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,11 +29,21 @@ ActiveRecord::Schema.define(version: 20180411074104) do
     t.index ["track_id"], name: "index_annotations_on_track_id"
   end
 
+  create_table "comment_upvotes", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "comment_id", null: false
+    t.integer "vote_value", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "comment_id"], name: "index_comment_upvotes_on_user_id_and_comment_id", unique: true
+  end
+
   create_table "track_comment_upvotes", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "track_comment_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "vote_value", null: false
     t.index ["user_id", "track_comment_id"], name: "index_track_comment_upvotes_on_user_id_and_track_comment_id", unique: true
   end
 

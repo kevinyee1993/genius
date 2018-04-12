@@ -30,7 +30,7 @@ class User < ApplicationRecord
     foreign_key: :author_id,
     class_name: 'TrackComment'
 
-  has_many :track_comment_upvotes,
+  has_many :track_comment_voted,
     foreign_key: :user_id,
     class_name: 'TrackCommentUpvote'
 
