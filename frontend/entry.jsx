@@ -16,6 +16,10 @@ import { fetchTrackComments, createTrackComment, updateTrackComment, destroyTrac
 from './actions/track_comment_actions';
 // import { createTrackComment } from './util/track_comments_api_util';
 
+//testing comment upvote api utils
+import { createUpvote, updateUpvote, destroyUpvote } from './util/track_comment_upvotes_api_util';
+
+
 //end of testing imports
 
 
@@ -37,11 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
       window.dispatch = store.dispatch;
 
     //api util tests
-      // window.updateTrack = updateTrack;
-
-    //annotation api util tests
-
-    //end annotation api util tests
+    // createUpvote, updateUpvote, destroyUpvote
+    window.createUpvote = createUpvote;
+    window.updateUpvote = updateUpvote;
+    window.destroyUpvote = destroyUpvote;
 
 
     //action tests track comments

@@ -3,7 +3,7 @@ class Api::CommentUpvotesController < ApplicationController
   def create
     @upvote = CommentUpvote.new(upvote_params)
     @upvote.user_id = current_user.id
-    @upvote.comment_id = Comment.find(params[:track_comment_id])
+    @upvote.comment_id = TrackComment.find_by(id: params[:track_comment_id].to_i)[:id]
 
 #not sure if I want to render show or index here
 #do i even need to render anything here..? can just go to comments and call the score
@@ -17,8 +17,9 @@ class Api::CommentUpvotesController < ApplicationController
 
   end
 
-  def delete
+  def destroy
     @upvote = CommentUpvote.find(params[:id])
+
 
     if @upvote.destroy
       #don't need to render anything if you destroy
@@ -39,7 +40,7 @@ class Api::CommentUpvotesController < ApplicationController
 
   private
   def upvote_params
-    params.require(:comment_upvotes).permit(:vote_value)
+    params.require(:comment_upvote).permit(:vote_value)
   end
 
 end
