@@ -1,9 +1,10 @@
 .front-page-stories {
   display: flex;
+  justify-content: center;
 }
 
 .dummy-stories {
-  margin-left: 100px;
+  margin-left: 30px;
   margin-bottom: 30px;
   margin-top: 30px;
 }
@@ -19,7 +20,7 @@
 
 .side-stories img {
   height: 157px;
-  width: 200px;
+  width: 230px;
   // margin-left: 25px;
   // margin-bottom: 11px;
   opacity: 0.3;
@@ -32,14 +33,14 @@
 
 .main-story {
   height: 327px;
-  width: 530px;
+  width: 550px;
   background: linear-gradient(#595959, black 50%);
   // background-color: black;
 }
 
 .main-story img {
   height: 327px;
-  width: 530px;
+  width: 550px;
   opacity: 0.3;
 }
 
