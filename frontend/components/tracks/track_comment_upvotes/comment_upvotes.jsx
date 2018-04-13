@@ -35,7 +35,7 @@ class CommentUpvotes extends React.Component {
 
     downvotePressed() {
       let currentUpvote;
-      currentUpvote = this.props.upvotes.find(upvote => (upvote.user_id === this.props.currentUser.id 
+      currentUpvote = this.props.upvotes.find(upvote => (upvote.user_id === this.props.currentUser.id
       && upvote.comment_id === this.props.comment.id));
 
 
@@ -61,15 +61,21 @@ class CommentUpvotes extends React.Component {
     }
     );
 
-    // let currentComment = this.props.comments.find(comment => comment.id === this.props.comment.id );
-    // console.log(currentComment.score);
+    let fontColor;
 
-    // { currentComment.score }
+    if(score > 0) {
+      fontColor = "green";
+    } else if (score < 0) {
+      fontColor = "red";
+    } else {
+      fontColor = "black";
+    }
+
     return(
 
-      <div>
+      <div className="upvote-value-downvote">
         <button onClick={ () => this.upvotePressed() }>Upvote</button>
-            { score }
+            <p className={ fontColor }>{ score }</p>
         <button onClick={ () => this.downvotePressed() }>Downvote</button>
 
       </div>
