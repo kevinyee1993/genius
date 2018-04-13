@@ -76,9 +76,6 @@ class CommentUpvotes extends React.Component {
 
   render() {
 
-    // console.log(this.checkUpvoteExistAndValue());
-
-    // let currentComment = this.props.comments.find(comment => comment.id === this.props.comment.id );
     let score = 0;
     this.props.upvotes.map( upvote => {
       if(upvote.comment_id === this.props.comment.id) {

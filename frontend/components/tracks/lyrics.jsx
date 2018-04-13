@@ -17,27 +17,8 @@ class Lyrics extends React.Component {
     this.props.fetchAllTracks();
   }
 
-  //just testing out different methods right here
-  //this will make the annotation form pop up after you select some text
-  //just testing you know
-  // mouseUp() {
-  //   let selection = window.getSelection();
-  //   let link = (<Link to="/">hello</Link>);
-  //   console.log(window.getSelection().toString());
-  //   if(window.getSelection().toString().length > 1) {
-  //     document.execCommand("createLink", false, "/");
-  //   }
-  // }
-
-//want this function to open up a start annotation button on the side
-//which can then redirect to an annotation form
-//this function should create or display button
-//what if there is always a button somewhere next to the text (depending on where the selection was made)
-//this button has a class of hidden
-//after you make this selection you change that button's class to a class that displays it
 selectionMade() {
   if(window.getSelection().toString().length > 1) {
-    console.log(window.getSelection());
     this.setState({ showLink: true });
   }
 }

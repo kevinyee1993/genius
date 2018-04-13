@@ -17,7 +17,6 @@ class TrackIndex extends React.Component {
   render() {
 
     const tracks = this.props.tracks.map(track => {
-      console.log(track);
       let trackImage;
       if (track.img_url) {
         trackImage = track.img_url;

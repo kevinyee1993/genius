@@ -25,7 +25,6 @@ class CommentEditForm extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return(
       <div>
       <form className="edit-comment-form" onSubmit={ this.handleSubmit }>

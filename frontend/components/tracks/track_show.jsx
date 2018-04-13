@@ -33,11 +33,6 @@ class TrackShow extends React.Component {
     }
   }
 
-  //TODO: DELETE THIS, WAS JUST TESTING HOW TO TEST window.getSelection()
-  // testWindow() {
-  //   console.log(window.getSelection());
-  // }
-
 
   //here check if you are on the edit lyrics page and if you are, set the edit
   //lyrics form to be rendered in place of the actual lyrics
