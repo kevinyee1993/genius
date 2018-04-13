@@ -1,15 +1,15 @@
 class Api::AnnotationsController < ApplicationController
 
   def index
-    track_id = params[:track_id]
-    @track = Track.find_by(id: track_id)
-    @annotations = @track.annotations
+    # track_id = params[:track_id]
+    # @track = Track.find_by(id: track_id)
+    @annotations = Annotation.all
   end
 
   def show
     track_id = params[:track_id]
     currentTrack = Track.find_by(id: track_id)
-    @annotation = currentTrack.annotations[params[:id].to_i - 1]
+    @annotation = currentTrack.annotations[params[:id]]
   end
 
 #need to manually enter the track id and the user id
