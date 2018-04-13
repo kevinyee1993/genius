@@ -22,6 +22,11 @@
   }
 }
 
+.score {
+  position: absolute;
+  margin-left: 30px;
+}
+
 .no-user {
   display: none;
 }
@@ -56,4 +61,8 @@
 .downvote-has-current-user-black:hover {
   display: flex;
   color: #EB382B;
+}
+
+.first-button {
+  margin-right: 15px;
 }

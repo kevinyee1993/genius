@@ -125,11 +125,15 @@ class CommentUpvotes extends React.Component {
 
       <div className="upvote-value-downvote">
 
-        <button className={ upvoteHasCurrentUser } onClick={ () => this.upvotePressed() }>
-           <FontAwesomeIcon icon={faThumbsUp} />
-        </button>
+        <div className="first-button">
+          <button className={ upvoteHasCurrentUser } onClick={ () => this.upvotePressed() }>
+             <FontAwesomeIcon icon={faThumbsUp} />
+          </button>
+        </div>
 
+            <div className="score">
               <p className={ fontColor }>{ score }</p>
+            </div>
 
 
         <button className={ downvoteHasCurrentUser }onClick={ () => this.downvotePressed() }>
