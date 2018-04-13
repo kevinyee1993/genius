@@ -18,7 +18,18 @@
   display: none;
 }
 
-.has-current-user {
+.has-current-user-green {
   display: flex;
+  color: #5DC746;
+}
 
+.has-current-user-red {
+  display: flex;
+  color: #EB382B;
+
+}
+
+.has-current-user-black {
+  display: flex;
+  color: black;
 }

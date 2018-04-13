@@ -8,11 +8,32 @@ class CommentUpvotes extends React.Component {
     super(props);
     this.upvotePressed = this.upvotePressed.bind(this);
     this.downvotePressed = this.downvotePressed.bind(this);
+    this.checkUpvoteExistAndValue = this.checkUpvoteExistAndValue.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchUpvotes();
     this.props.fetchTrackComments();
+  }
+
+  checkUpvoteExistAndValue() {
+    let currentUpvote;
+
+    if(!this.props.currentUser) {
+      return 0;
+    }
+
+    currentUpvote = this.props.upvotes.find(upvote => (upvote.user_id === this.props.currentUser.id
+    && upvote.comment_id === this.props.comment.id));
+
+    if(currentUpvote && currentUpvote.vote_value === 1) {
+      return 1;
+    } else if (currentUpvote && currentUpvote.vote_value === -1) {
+      return -1;
+    }
+    else {
+      return 0;
+    }
   }
 
 
@@ -52,6 +73,8 @@ class CommentUpvotes extends React.Component {
 
   render() {
 
+    // console.log(this.checkUpvoteExistAndValue());
+
     // let currentComment = this.props.comments.find(comment => comment.id === this.props.comment.id );
     let score = 0;
     this.props.upvotes.map( upvote => {
@@ -71,10 +94,28 @@ class CommentUpvotes extends React.Component {
       fontColor = "black";
     }
 
-    let hasCurrentUser = "no-user";
+//check to see if user already upvoted or downvoted
+//if upvote.userId === upvote.id && upvote.voteValue === 1 make button green
+//if upvote.userId === upvote.id && upvote.voteValue === -11 make button red
+//else make button black
+
+
+    let upvoteHasCurrentUser = "no-user";
+    let downvoteHasCurrentUser = "no-user";
 
     if(this.props.currentUser) {
-      hasCurrentUser = "has-current-user";
+      if(this.checkUpvoteExistAndValue() === 1) {
+        upvoteHasCurrentUser = "has-current-user-green";
+        downvoteHasCurrentUser = "has-current-user-black";
+      }
+    else if(this.checkUpvoteExistAndValue() === -1) {
+      upvoteHasCurrentUser = "has-current-user-black";
+      downvoteHasCurrentUser = "has-current-user-red";
+    }
+    else {
+      upvoteHasCurrentUser = "has-current-user-black";
+      downvoteHasCurrentUser = "has-current-user-black";
+    }
     }
 
     return(
@@ -83,12 +124,12 @@ class CommentUpvotes extends React.Component {
 
         <i class="fa fa-thumbs-up" aria-hidden="true"></i>
 
-        <button className={ hasCurrentUser } onClick={ () => this.upvotePressed() }>Upvote</button>
+        <button className={ upvoteHasCurrentUser } onClick={ () => this.upvotePressed() }>Upvote</button>
 
               <p className={ fontColor }>{ score }</p>
 
 
-        <button className={ hasCurrentUser }onClick={ () => this.downvotePressed() }>Downvote</button>
+        <button className={ downvoteHasCurrentUser }onClick={ () => this.downvotePressed() }>Downvote</button>
 
       </div>
     );
