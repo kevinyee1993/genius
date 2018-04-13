@@ -20,8 +20,8 @@ class CommentUpvotes extends React.Component {
     let currentUpvote;
 
     //checks to see if a user has upvoted this comment
-    currentUpvote = this.props.upvotes.find(upvote => upvote.user_id === this.props.currentUser.id );
-
+    currentUpvote = this.props.upvotes.find(upvote => (upvote.user_id === this.props.currentUser.id
+    && upvote.comment_id === this.props.comment.id));
     //want to add a condition for when user upvotes on a downvote or something
       if(currentUpvote && currentUpvote.vote_value === 1) {
         this.props.destroyUpvote(currentUpvote.id);
@@ -35,7 +35,8 @@ class CommentUpvotes extends React.Component {
 
     downvotePressed() {
       let currentUpvote;
-      currentUpvote = this.props.upvotes.find(upvote => upvote.user_id === this.props.currentUser.id );
+      currentUpvote = this.props.upvotes.find(upvote => (upvote.user_id === this.props.currentUser.id 
+      && upvote.comment_id === this.props.comment.id));
 
 
       if(currentUpvote && currentUpvote.vote_value === -1) {
@@ -50,6 +51,7 @@ class CommentUpvotes extends React.Component {
     }
 
   render() {
+
     // let currentComment = this.props.comments.find(comment => comment.id === this.props.comment.id );
     let score = 0;
     this.props.upvotes.map( upvote => {
@@ -57,16 +59,17 @@ class CommentUpvotes extends React.Component {
         score += upvote.vote_value;
       }
     }
-
     );
 
+    // let currentComment = this.props.comments.find(comment => comment.id === this.props.comment.id );
+    // console.log(currentComment.score);
+
+    // { currentComment.score }
     return(
 
       <div>
         <button onClick={ () => this.upvotePressed() }>Upvote</button>
-
-          { score }
-
+            { score }
         <button onClick={ () => this.downvotePressed() }>Downvote</button>
 
       </div>

@@ -7,7 +7,8 @@ const mapStateToProps = (state) => {
   return(
     {
       upvotes: Object.values(state.entities.trackCommentUpvotes),
-      comments: Object.values(state.entities.trackComments)
+      comments: Object.values(state.entities.trackComments),
+      currentUser: state.session.currentUser
     }
   );
 };
