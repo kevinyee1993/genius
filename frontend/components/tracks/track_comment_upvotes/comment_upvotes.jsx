@@ -7,6 +7,7 @@ class CommentUpvotes extends React.Component {
   constructor(props) {
     super(props);
     this.upvotePressed = this.upvotePressed.bind(this);
+    this.downvotePressed = this.downvotePressed.bind(this);
   }
 
   componentDidMount() {
@@ -21,28 +22,31 @@ class CommentUpvotes extends React.Component {
     //checks to see if a user has upvoted this comment
     currentUpvote = this.props.upvotes.find(upvote => upvote.user_id === this.props.currentUser.id );
 
-
     //want to add a condition for when user upvotes on a downvote or something
-    if(currentUpvote && currentUpvote.vote_value === 1) {
-      this.props.destroyUpvote(currentUpvote.id);
+      if(currentUpvote && currentUpvote.vote_value === 1) {
+        this.props.destroyUpvote(currentUpvote.id);
+      } else if(currentUpvote && currentUpvote.vote_value === -1) {
+        this.props.destroyUpvote(currentUpvote.id);
+        this.props.createUpvote(this.props.comment.id, {comment_upvote: {vote_value: 1}});
+      } else {
+        this.props.createUpvote(this.props.comment.id, {comment_upvote: {vote_value: 1}});
+      }
     }
-    else {
-      this.props.createUpvote(this.props.comment.id, {comment_upvote: {vote_value: 1}});
-    }
+
+    downvotePressed() {
+      let currentUpvote;
+      currentUpvote = this.props.upvotes.find(upvote => upvote.user_id === this.props.currentUser.id );
 
 
-
-
-      // let currentUpvote;
-      // currentUpvote = this.props.comment.upvotes.find(upvote => upvote.user_id === this.props.currentUser.id );
-
-      // if (currentUpvote && currentUpvote.user_id === this.props.currentUser.id && currentUpvote.vote_value === 1) {
-      //   this.props.destroyUpvote(currentUpvote.id);
-      // }
-      // else {
-        // this.props.createUpvote(this.props.comment.id, {comment_upvote: {vote_value: 1}});
-      // }
-
+      if(currentUpvote && currentUpvote.vote_value === -1) {
+        this.props.destroyUpvote(currentUpvote.id);
+      } else if(currentUpvote && currentUpvote.vote_value === 1) {
+        this.props.destroyUpvote(currentUpvote.id);
+        this.props.createUpvote(this.props.comment.id, {comment_upvote: {vote_value: -1}});
+      }
+      else {
+        this.props.createUpvote(this.props.comment.id, {comment_upvote: {vote_value: -1}});
+      }
     }
 
   render() {
@@ -53,6 +57,7 @@ class CommentUpvotes extends React.Component {
         score += upvote.vote_value;
       }
     }
+
     );
 
     return(
@@ -62,7 +67,7 @@ class CommentUpvotes extends React.Component {
 
           { score }
 
-        <button>Downvote</button>
+        <button onClick={ () => this.downvotePressed() }>Downvote</button>
 
       </div>
     );
