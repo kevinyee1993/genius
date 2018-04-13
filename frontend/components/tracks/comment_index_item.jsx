@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { ProtectedRoute } from '../../util/route_util';
 
 
+
+
 import CommentUpvotesContainer from './track_comment_upvotes/comment_upvotes_container';
 
 class CommentIndexItem extends React.Component {
@@ -27,6 +29,7 @@ class CommentIndexItem extends React.Component {
       <ul className="comment-entry">
        <li className="username"> {this.props.comment.author.username} </li>
        <li className="comment-body"> {this.props.comment.body} </li>
+          
        { editAndDeleteButtons }
        <br></br>
        <CommentUpvotesContainer currentUser={ this.props.currentUser } comment={ this.props.comment }/>

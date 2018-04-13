@@ -12,6 +12,14 @@
 
 .upvote-value-downvote {
   display: flex;
+
+  button {
+    border-bottom: none;
+  }
+
+  button:hover {
+    border-bottom: none;
+  }
 }
 
 .no-user {

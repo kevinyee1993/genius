@@ -1,4 +1,7 @@
 import React from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faThumbsUp from '@fortawesome/fontawesome-free-solid/faThumbsUp';
+import faThumbsDown from '@fortawesome/fontawesome-free-solid/faThumbsDown';
 
 
 //just gotta add buttons here that call dispatch actions or whatever feel me
@@ -122,14 +125,16 @@ class CommentUpvotes extends React.Component {
 
       <div className="upvote-value-downvote">
 
-        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-
-        <button className={ upvoteHasCurrentUser } onClick={ () => this.upvotePressed() }>Upvote</button>
+        <button className={ upvoteHasCurrentUser } onClick={ () => this.upvotePressed() }>
+           <FontAwesomeIcon icon={faThumbsUp} />
+        </button>
 
               <p className={ fontColor }>{ score }</p>
 
 
-        <button className={ downvoteHasCurrentUser }onClick={ () => this.downvotePressed() }>Downvote</button>
+        <button className={ downvoteHasCurrentUser }onClick={ () => this.downvotePressed() }>
+           <FontAwesomeIcon icon={faThumbsDown} />
+        </button>
 
       </div>
     );
