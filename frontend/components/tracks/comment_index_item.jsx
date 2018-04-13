@@ -27,9 +27,12 @@ class CommentIndexItem extends React.Component {
 
     return (
       <ul className="comment-entry">
-       <li className="username"> {this.props.comment.author.username} </li>
+        <div className="pic-and-username">
+          <img src="https://i.imgur.com/Ar8mFFk.png"></img>
+          <li className="username"> {this.props.comment.author.username} </li>
+        </div>
        <li className="comment-body"> {this.props.comment.body} </li>
-          
+
        { editAndDeleteButtons }
        <br></br>
        <CommentUpvotesContainer currentUser={ this.props.currentUser } comment={ this.props.comment }/>
