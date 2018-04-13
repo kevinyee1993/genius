@@ -23,13 +23,29 @@
   color: #5DC746;
 }
 
+
 .has-current-user-red {
   display: flex;
   color: #EB382B;
-
 }
 
-.has-current-user-black {
+
+.upvote-has-current-user-black {
   display: flex;
   color: black;
+}
+
+.upvote-has-current-user-black:hover {
+  display: flex;
+  color: #5DC746;
+}
+
+.downvote-has-current-user-black {
+  display: flex;
+  color: black;
+}
+
+.downvote-has-current-user-black:hover {
+  display: flex;
+  color: #EB382B;
 }

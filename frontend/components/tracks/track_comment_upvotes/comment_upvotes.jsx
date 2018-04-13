@@ -106,15 +106,15 @@ class CommentUpvotes extends React.Component {
     if(this.props.currentUser) {
       if(this.checkUpvoteExistAndValue() === 1) {
         upvoteHasCurrentUser = "has-current-user-green";
-        downvoteHasCurrentUser = "has-current-user-black";
+        downvoteHasCurrentUser = "downvote-has-current-user-black";
       }
     else if(this.checkUpvoteExistAndValue() === -1) {
-      upvoteHasCurrentUser = "has-current-user-black";
+      upvoteHasCurrentUser = "upvote-has-current-user-black";
       downvoteHasCurrentUser = "has-current-user-red";
     }
     else {
-      upvoteHasCurrentUser = "has-current-user-black";
-      downvoteHasCurrentUser = "has-current-user-black";
+      upvoteHasCurrentUser = "upvote-has-current-user-black";
+      downvoteHasCurrentUser = "downvote-has-current-user-black";
     }
     }
 
