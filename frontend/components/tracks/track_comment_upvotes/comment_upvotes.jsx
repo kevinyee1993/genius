@@ -11,6 +11,7 @@ class CommentUpvotes extends React.Component {
 
   componentDidMount() {
     this.props.fetchUpvotes();
+    this.props.fetchTrackComments();
   }
 
 
@@ -20,9 +21,12 @@ class CommentUpvotes extends React.Component {
     //checks to see if a user has upvoted this comment
     currentUpvote = this.props.upvotes.find(upvote => upvote.user_id === this.props.currentUser.id );
 
-    if(currentUpvote) {
+
+    //want to add a condition for when user upvotes on a downvote or something
+    if(currentUpvote && currentUpvote.vote_value === 1) {
       this.props.destroyUpvote(currentUpvote.id);
-    } else {
+    }
+    else {
       this.props.createUpvote(this.props.comment.id, {comment_upvote: {vote_value: 1}});
     }
 
@@ -42,11 +46,21 @@ class CommentUpvotes extends React.Component {
     }
 
   render() {
+    // let currentComment = this.props.comments.find(comment => comment.id === this.props.comment.id );
+    let score = 0;
+    this.props.upvotes.map( upvote => {
+      if(upvote.comment_id === this.props.comment.id) {
+        score += upvote.vote_value;
+      }
+    }
+    );
+
     return(
+
       <div>
         <button onClick={ () => this.upvotePressed() }>Upvote</button>
 
-          {this.props.comment.score}
+          { score }
 
         <button>Downvote</button>
 
