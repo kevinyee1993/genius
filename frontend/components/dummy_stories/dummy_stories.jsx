@@ -34,7 +34,7 @@ class DummyStories extends React.Component {
           <div className="extra-entries">
             <div className="extra-entry-item">
               <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/hsdogdog-profile_image-5550ade194780dfc-300x300.jpeg"></img>
-              <p className="extra-story-heading">Dogs are smarter than you think when you talk to them</p>
+              <p className="extra-story-heading">Dogs know more human words than I know dog words</p>
             </div>
 
             <div className="extra-entry-item">
@@ -43,18 +43,18 @@ class DummyStories extends React.Component {
             </div>
 
             <div className="extra-entry-item">
-              <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/hsdogdog-profile_image-5550ade194780dfc-300x300.jpeg"></img>
-              <p className="extra-story-heading">Dogs are smarter than you think when you talk to them</p>
+              <img src="https://www.wikiality.com/file/2016/11/bears1.jpg"></img>
+              <p className="extra-story-heading">Don't talk to bears - they will try to eat you!</p>
+            </div>
+
+            <div className="extra-entry-item">
+              <img src="https://thumbs.dreamstime.com/b/portrait-mixed-race-man-looking-confused-something-scratches-his-head-confusion-43412654.jpg"></img>
+              <p className="extra-story-heading">I'm all out of conversation facts what do I do</p>
             </div>
 
             <div className="extra-entry-item">
               <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/hsdogdog-profile_image-5550ade194780dfc-300x300.jpeg"></img>
-              <p className="extra-story-heading">Dogs are smarter than you think when you talk to them</p>
-            </div>
-
-            <div className="extra-entry-item">
-              <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/hsdogdog-profile_image-5550ade194780dfc-300x300.jpeg"></img>
-              <p className="extra-story-heading">Dogs are smarter than you think when you talk to them</p>
+              <p className="extra-story-heading">Here's the picture of the glasses dog again</p>
             </div>
 
           </div>
