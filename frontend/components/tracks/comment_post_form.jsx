@@ -27,6 +27,12 @@ class CommentPostForm extends React.Component {
 
 
   render() {
+    let placeHolder = "Log in to comment!";
+
+    if(this.props.currentUser) {
+      placeHolder = "Add a comment";
+    }
+
     return(
       <div className="comment-form-container">
 
@@ -34,7 +40,7 @@ class CommentPostForm extends React.Component {
 
           <textarea
             className="comment-form-input"
-            placeholder="Add a comment"
+            placeholder={ placeHolder }
             value={this.state.body}
             onChange = { this.update('body') }
           />

@@ -6,7 +6,8 @@ import { createTrackComment } from '../../actions/track_comment_actions';
 
 //not sure if need any state here for now.. errors maybe for now
 const mapStateToProps = (state) => ({
-  errors: state.errors.trackComments
+  errors: state.errors.trackComments,
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({
