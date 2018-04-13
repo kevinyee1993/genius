@@ -4,10 +4,16 @@
 import * as APIUtil from '../util/track_comment_upvotes_api_util';
 
 export const RECEIVE_SINGLE_COMMENT = 'RECEIVE_SINGLE_COMMENT';
+export const REMOVE_UPVOTE = 'REMOVE_UPVOTE';
 
 export const receiveSingleComment = (comment) => ({
   type: RECEIVE_SINGLE_COMMENT,
   comment
+});
+
+export const removeUpvote = (upvoteId) => ({
+  type: REMOVE_UPVOTE,
+  upvoteId
 });
 
 export const createUpvote = (commentId, voteValue) => dispatch => (
@@ -28,3 +34,9 @@ export const destroyUpvote = (upvoteId) => dispatch => (
     dispatch(receiveSingleComment(comment))
   ))
 );
+
+// export const destroyUpvote = (upvoteId) => dispatch => (
+//   APIUtil.destroyUpvote(upvoteId).then(comment => (
+//     dispatch(receiveSingleComment(comment))
+//   ))
+// );

@@ -5,6 +5,10 @@ class Api::CommentUpvotesController < ApplicationController
   #   render 'api/track_comments/show'
   # end
 
+  def index
+    @upvotes = CommentUpvote.all
+  end
+
   def create
     @upvote = CommentUpvote.new(upvote_params)
     @upvote.user_id = current_user.id
@@ -20,11 +24,13 @@ class Api::CommentUpvotesController < ApplicationController
   end
 
   def destroy
+    @upvotes = CommentUpvote.all
     @upvote = CommentUpvote.find(params[:id])
     @comment = @upvote.comment
 
     if @upvote.destroy
-      render 'api/track_comments/show'
+      # render 'api/track_comments/show'
+      render :index
     else
       render json: @upvote.errors.full_messages, status: 422
     end

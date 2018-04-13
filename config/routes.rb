@@ -25,7 +25,7 @@ Rails.application.routes.draw do
       resources :comment_upvotes, only: [:create]
     end
 
-    resources :comment_upvotes, only: [:destroy, :update]
+    resources :comment_upvotes, only: [:destroy, :update, :index]
 
     resource :session, only: [:create, :destroy]
   end
