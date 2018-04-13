@@ -17,10 +17,11 @@
 
 # ConvoGenius
 
+[Live Version](https://convogenius.herokuapp.com/#/)
 
 
 # Description
-ConvoGenius is an app that allows users to decipher and break down the nuances of different conversations.  Ever wonder if your significant other is mad at you or if they're actually "fine"?  Ever wonder if your friend is hinting that they want some of your food?  ConvoGenius is the app for you.
+ConvoGenius is a clone of [Genius](https://genius.com/) that allows users to decipher and break down the nuances of different conversations.  Ever wonder if your significant other is mad at you or if they're actually "fine"?  Ever wonder if your friend is hinting that they want some of your food?  ConvoGenius is the app for you.
 
 [Wiki design documents](https://github.com/kevinyee1993/genius/wiki)
 
@@ -43,6 +44,7 @@ Comments are created using React/Redux which allows any new comments to appear i
 
 ### Upvoting and Downvoting
 ![Imgur](https://i.imgur.com/LqOgZVE.gif)
+
 # Technologies
 The backend of this app was built with Ruby on Rails.  PostgreSQL was used to manage the database.  The frontend was built using JavaScript, namely the JavaScript libraries React and Redux.   React/Redux allowed the app to be built as a single-page app which merely re-rendered different components on the page rather than redirecting to a new page.  
 
@@ -54,28 +56,3 @@ To connect the frontend with the backend, jQuery was used.  AJAX requests were m
 * Track creation
 * Allows users to post images/gifs in their comments
 * Music player in the track show pages
-
-
-
-<!-- This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ... -->
