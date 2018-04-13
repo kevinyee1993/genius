@@ -51,6 +51,7 @@ class TrackIndex extends React.Component {
 
     return(
       <div>
+        <h1 className="track-index-heading"> Top Conversations </h1>
         <h1>{ tracks }</h1>
       </div>
     );
