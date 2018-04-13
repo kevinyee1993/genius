@@ -1,3 +1,10 @@
+export const fetchUpvotes = () => (
+  $.ajax({
+    method: 'GET',
+    url: '/api/comment_upvotes'
+  })
+);
+
 export const createUpvote = (commentId, voteValue) => (
   $.ajax({
     method: 'POST',

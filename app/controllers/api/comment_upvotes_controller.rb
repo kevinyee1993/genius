@@ -1,13 +1,12 @@
 class Api::CommentUpvotesController < ApplicationController
-
-  # def show
-  #   @comment = TrackComment.first
-  #   render 'api/track_comments/show'
-  # end
-
   def index
     @upvotes = CommentUpvote.all
   end
+
+  def show
+    @upvote = CommentUpvote.find_by(id: params[:id])
+  end
+
 
   def create
     @upvote = CommentUpvote.new(upvote_params)
@@ -16,7 +15,7 @@ class Api::CommentUpvotesController < ApplicationController
     @upvote.comment_id = @comment[:id]
 
     if @upvote.save
-      render 'api/track_comments/show'
+      render :show
     else
       render json: @upvote.errors.full_messages, status: 422
     end
@@ -29,8 +28,7 @@ class Api::CommentUpvotesController < ApplicationController
     @comment = @upvote.comment
 
     if @upvote.destroy
-      # render 'api/track_comments/show'
-      render :index
+      render :show
     else
       render json: @upvote.errors.full_messages, status: 422
     end
@@ -41,7 +39,7 @@ class Api::CommentUpvotesController < ApplicationController
     @comment = @upvote.comment
 
     if @upvote.update(upvote_params)
-      render 'api/track_comments/show'
+      render :show
     else
       render json: @upvote.errors.full_messages, status: 422
     end

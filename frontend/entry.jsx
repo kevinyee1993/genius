@@ -17,8 +17,8 @@ from './actions/track_comment_actions';
 // import { createTrackComment } from './util/track_comments_api_util';
 
 //testing comment upvote api utils
-// import { createUpvote, updateUpvote, destroyUpvote } from './util/track_comment_upvotes_api_util';
-import { createUpvote, updateUpvote, destroyUpvote } from './actions/track_comment_upvote_actions';
+// import { createUpvote, updateUpvote, destroyUpvote, fetchUpvotes } from './util/track_comment_upvotes_api_util';
+import { createUpvote, updateUpvote, destroyUpvote, fetchUpvotes } from './actions/track_comment_upvote_actions';
 
 //end of testing imports
 
@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.createUpvote = createUpvote;
     window.updateUpvote = updateUpvote;
     window.destroyUpvote = destroyUpvote;
+    window.fetchUpvotes = fetchUpvotes;
 
 
 

@@ -9,17 +9,36 @@ class CommentUpvotes extends React.Component {
     this.upvotePressed = this.upvotePressed.bind(this);
   }
 
+  componentDidMount() {
+    this.props.fetchUpvotes();
+  }
+
 
   upvotePressed() {
-      let currentUpvote;
-      currentUpvote = this.props.comment.upvotes.find(upvote => upvote.user_id === this.props.currentUser.id );
+    let currentUpvote;
 
-      if (currentUpvote && currentUpvote.user_id === this.props.currentUser.id && currentUpvote.vote_value === 1) {
-        this.props.destroyUpvote(currentUpvote.id);
-      }
-      else {
-        this.props.createUpvote(this.props.comment.id, {comment_upvote: {vote_value: 1}});
-      }
+    //checks to see if a user has upvoted this comment
+    currentUpvote = this.props.upvotes.find(upvote => upvote.user_id === this.props.currentUser.id );
+
+    if(currentUpvote) {
+      this.props.destroyUpvote(currentUpvote.id);
+    } else {
+      this.props.createUpvote(this.props.comment.id, {comment_upvote: {vote_value: 1}});
+    }
+
+
+
+
+      // let currentUpvote;
+      // currentUpvote = this.props.comment.upvotes.find(upvote => upvote.user_id === this.props.currentUser.id );
+
+      // if (currentUpvote && currentUpvote.user_id === this.props.currentUser.id && currentUpvote.vote_value === 1) {
+      //   this.props.destroyUpvote(currentUpvote.id);
+      // }
+      // else {
+        // this.props.createUpvote(this.props.comment.id, {comment_upvote: {vote_value: 1}});
+      // }
+
     }
 
   render() {
