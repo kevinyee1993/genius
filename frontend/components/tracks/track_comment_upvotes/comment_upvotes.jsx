@@ -71,12 +71,24 @@ class CommentUpvotes extends React.Component {
       fontColor = "black";
     }
 
+    let hasCurrentUser = "no-user";
+
+    if(this.props.currentUser) {
+      hasCurrentUser = "has-current-user";
+    }
+
     return(
 
       <div className="upvote-value-downvote">
-        <button onClick={ () => this.upvotePressed() }>Upvote</button>
-            <p className={ fontColor }>{ score }</p>
-        <button onClick={ () => this.downvotePressed() }>Downvote</button>
+
+        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+
+        <button className={ hasCurrentUser } onClick={ () => this.upvotePressed() }>Upvote</button>
+
+              <p className={ fontColor }>{ score }</p>
+
+
+        <button className={ hasCurrentUser }onClick={ () => this.downvotePressed() }>Downvote</button>
 
       </div>
     );
@@ -86,7 +98,7 @@ class CommentUpvotes extends React.Component {
 export default CommentUpvotes;
 
 
-
+// <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
 // import React from 'react';
 //just gotta add buttons here that call dispatch actions or whatever feel me
 //gotta do some logic here like if an upvote already has an upvote value
