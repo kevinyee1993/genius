@@ -45,12 +45,14 @@ selectionMade() {
       let endIdx  = window.getSelection().focusOffset;
       let selectionText = window.getSelection().toString();
 
-      if(this.state.showLink) {
-        annotationLink = (<Link to={`/tracks/${this.props.track.id}/annotations/new`}
-          onClick={ () => this.setState({ showLink: false }) }>Annotate Lyric</Link>);
-      } else {
-        annotationLink = "";
-      }
+      //TODO: THESE ARE ANNOTATIONS ADD THEM BACK IN WHEN YOU GET TO IT
+      // if(this.state.showLink) {
+      //   annotationLink = (<Link to={`/tracks/${this.props.track.id}/annotations/new`}
+      //     onClick={ () => this.setState({ showLink: false }) }>Annotate Lyric</Link>);
+      // } else {
+      //   annotationLink = "";
+      // }
+
       // <button onClick={() => this.mouseUp()}>Click me to make a link!</button>
 
       //may not need contentEditable if you figure out how to do
