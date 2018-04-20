@@ -63,6 +63,7 @@ render() {
                     value={this.state.username}
                     onChange={this.update('username')}
                     className="login-input"
+                    placeHolder="Enter username"
                   />
                 </label>
               </section>
@@ -75,6 +76,7 @@ render() {
                     value={this.state.password}
                     onChange={this.update('password')}
                     className="login-input"
+                    placeHolder="Enter password"
                   />
                 </label>
               </section>
