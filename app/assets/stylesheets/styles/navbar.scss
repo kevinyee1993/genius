@@ -13,7 +13,12 @@
   font-weight: lighter;
 }
 
+.navbar-items a {
+  color: white;
+}
+
 .navbar-items p:hover {
   color: #FFFF64;
   transition: 0.3s;
+  cursor: pointer;
 }

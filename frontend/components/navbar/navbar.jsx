@@ -6,13 +6,8 @@ class Navbar extends React.Component {
     return(
       <div class="navbar">
         <section className="navbar-items">
-          <p>Dummy Text</p>
-          <p>Fullstack project</p>
-          <p>Go kev!!!</p>
-          <p>Hire me</p>
-          <p>Please</p>
-          <p>I need a job</p>
-          <p>github/linkedin</p>
+          <a href="https://github.com/kevinyee1993"><p>github</p></a>
+          <a href="https://www.linkedin.com/in/kevin-yee-9b7874158/"><p>linked in</p></a>
         </section>
       </div>
     );
