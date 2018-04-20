@@ -7,6 +7,8 @@
   cursor: pointer;
   color: black;
   height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .track-index-heading {
@@ -50,7 +52,7 @@ a {
 }
 
 a:nth-child(-n+3) .track-index-item {
-    padding: 0px 15px 0px 0px;
+    padding: 10px 15px 10px 0px;
     height: 70px;
 }
 
