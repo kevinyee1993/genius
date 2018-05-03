@@ -39,6 +39,7 @@
   font-size: .75em;
   cursor: pointer;
   display: flex;
+  margin-right: 3%;
 }
 
 .login-signup > a {
@@ -64,7 +65,7 @@ button {
 }
 
 button:hover {
-  border-bottom: 7px solid #ff1464;
+  border-bottom: 2px solid #ff1464;
   transition-property: border-bottom;
   transition-duration: 0.1s;
   transition-timing-function: initial;
