@@ -56,6 +56,6 @@ const App = () => (
 
   </div>
 );
-// <Route path="/" component={ TrackIndexContainer } />
 
 export default App;
+// <Route path="/" component={ TrackIndexContainer } />
