@@ -23,31 +23,39 @@ import CommentIndexContainer from './tracks/comment_index_container';
 import Navbar from './navbar/navbar';
 //end of dummy components
 
+//may or may not need this depending on if you use bootstrap
+// import Slider from "react-slick";
+import Slider from './carousel';
+
 
 const App = () => (
   <div>
 
     <Modal />
 
+
     <header className="main-header">
 
+
+
       <Link to={`/`}>
-        <p className="logo">CONVO</p>
+        <p className="logo">LYRICS</p>
       </Link>
+
 
       <GreetingContainer />
     </header>
 
     <Navbar />
 
-    <Route exact path='/' component={ DummyStories } />
+    <img className="heading-image" src="https://images.unsplash.com/photo-1501828983797-9d7f14e0263c?ixlib=rb-0.3.5&s=3954212c2b89ef1d2825c324e08f0e44&auto=format&fit=crop&w=1350&q=80"></img>
 
     <Switch>
       <Route path="/tracks/:trackId" component={ TrackShowContainer } />
-      <Route path="/" component={ TrackIndexContainer } />
     </Switch>
 
   </div>
 );
+// <Route path="/" component={ TrackIndexContainer } />
 
 export default App;

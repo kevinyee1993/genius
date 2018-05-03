@@ -99,3 +99,11 @@ a:nth-child(n+4) .track-index-item .small-artist:before {
   content: "y ";
   text-transform: lowercase;
 }
+
+.heading-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  top: 0;
+}

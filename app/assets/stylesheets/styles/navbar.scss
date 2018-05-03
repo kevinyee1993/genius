@@ -1,5 +1,5 @@
 .navbar {
-  background-color: black;
+  // background-color: black;
   color: white;
   height: 38px;
 }
@@ -11,6 +11,8 @@
   font-size: 13px;
   padding: 10px;
   font-weight: lighter;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, .2);
 }
 
 .navbar-items a {

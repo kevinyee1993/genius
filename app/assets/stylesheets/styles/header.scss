@@ -1,12 +1,14 @@
 .main-header {
   display: flex;
   justify-content: space-between;
-  background-color: #FFFF64;
+  // background-color: #FFFF64;
   height: 41px;
+  // padding-top: 10px;
 }
 
 .logo {
-    color: #FFFF64;
+    // color: #FFFF64;
+    color: white;
     text-shadow: -2px 3px black;
     font-weight: bold;
     font-size: 23px;
@@ -47,6 +49,7 @@ button {
      cursor: pointer;
      font-size: 13px;
      border-bottom: 7px solid transparent;
+     color: white;
 }
 
 button:hover {
