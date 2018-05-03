@@ -52,11 +52,10 @@ const App = () => (
 
     <Switch>
       <Route path="/tracks/:trackId" component={ TrackShowContainer } />
+      <Route path="/" component={ TrackIndexContainer } />
     </Switch>
 
   </div>
 );
 
 export default App;
-
-// <Route path="/" component={ TrackIndexContainer } />
