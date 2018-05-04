@@ -2,12 +2,13 @@
   display: flex;
   justify-content: space-between;
   // background-color: #FFFF64;
-  height: 41px;
+  height: 75px;
   width: 100%;
   position: absolute;
   // padding-top: 10%;
   // padding-right: 10%;
   // position: absolute;
+  border-bottom: 2px solid rgba(255, 255, 255, .2);
 }
 
 .main-header-show {
@@ -16,6 +17,7 @@
   // background-color: #FFFF64;
   height: 75px;
   width: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, .2);
   // position: absolute;
   // padding-top: 10%;
   // padding-right: 10%;
