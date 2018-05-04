@@ -25,6 +25,7 @@ import Navbar from './navbar/navbar';
 
 // import SplashImageIndex from './tracks/splash-index';
 import SplashImageIndex from './tracks/splash-index';
+import SplashImageShow from './tracks/splash-show';
 
 //may or may not need this depending on if you use bootstrap
 // import Slider from "react-slick";
@@ -37,25 +38,47 @@ const App = () => (
     <Modal />
 
 
-    <header className="main-header">
 
-
-
-      <Link to={`/`}>
-        <p className="logo">LYRICS</p>
-      </Link>
-
-
-      <GreetingContainer />
-    </header>
 
     <Navbar />
 
 
     <Switch>
       <Route path="/tracks/:trackId" component={ TrackShowContainer } />
+
+      <Route path="/tracks/:trackId" render={ () =>
+          <div>
+            <header className="main-header">
+
+
+
+              <Link to={`/`}>
+                <p className="logo">LYRICS</p>
+              </Link>
+
+
+              <GreetingContainer />
+            </header>
+            <SplashImageIndex />
+            <TrackShowContainer />
+          </div>
+      } />
+
+
       <Route path="/" render={ () =>
         <div>
+          <header className="main-header">
+
+
+
+            <Link to={`/`}>
+              <p className="logo">LYRICS</p>
+            </Link>
+
+
+            <GreetingContainer />
+          </header>
+          
           <SplashImageIndex />
           <TrackIndexContainer />
         </div>

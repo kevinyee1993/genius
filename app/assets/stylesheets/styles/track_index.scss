@@ -113,8 +113,20 @@ a:nth-child(n+4) .track-index-item .small-artist:before {
   top: 0;
 }
 
-.absolute-pos {
+
+
+.heading-image-show {
+  // position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  top: 0;
   position: absolute;
+}
+
+.extraspace {
+  // height: 200px;
+  margin-bottom: 200px;
 }
 
 .header-group {
