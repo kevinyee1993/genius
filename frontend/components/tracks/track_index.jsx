@@ -26,6 +26,7 @@ class TrackIndex extends React.Component {
       }
 
       return (
+        
       <Link to={`/tracks/${track.id}`}>
         <section className="track-index-item">
               <p className="track-number">

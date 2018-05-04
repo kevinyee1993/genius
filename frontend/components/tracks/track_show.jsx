@@ -27,6 +27,17 @@ class TrackShow extends React.Component {
     this.props.fetchAllTracks();
     this.props.fetchSingleTrack(this.props.match.params.trackId);
     window.scrollTo(0, 0);
+
+
+//want to take away the class which makes its position relative and absolute
+//maybe can just make a class that adds the absolute positioning here
+//and then take it away once you go to the index page
+
+
+    // document.getElementsByClassName("heading-image").classList.add('absolute-pos');
+    // document.getElementsByClassName("heading-image").classList.add('absolute-pos');
+
+    // document.getElementByClass("MyElement").classList.remove('MyClass');
   }
   componentWillReceiveProps(nextProps) {
     if(this.props.match.params.trackId != nextProps.match.params.trackId) {
