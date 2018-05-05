@@ -78,7 +78,7 @@ const App = () => (
 
             <GreetingContainer />
           </header>
-          
+
           <SplashImageIndex />
           <TrackIndexContainer />
         </div>
