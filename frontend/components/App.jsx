@@ -40,7 +40,6 @@ const App = () => (
 
 
 
-    <Navbar />
 
 
     <Switch>
@@ -81,6 +80,8 @@ const App = () => (
 
           <SplashImageIndex />
           <TrackIndexContainer />
+          
+          <Navbar />
         </div>
       } />
 
