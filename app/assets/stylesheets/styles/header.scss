@@ -1,18 +1,47 @@
 .main-header {
   display: flex;
   justify-content: space-between;
-  background-color: #FFFF64;
-  height: 41px;
+  // background-color: #FFFF64;
+  height: 75px;
+  width: 100%;
+  position: absolute;
+  // padding-top: 10%;
+  // padding-right: 10%;
+  // position: absolute;
+  border-bottom: 2px solid rgba(255, 255, 255, .2);
+}
+
+.main-header-show {
+  display: flex;
+  justify-content: space-between;
+  // background-color: #FFFF64;
+  height: 75px;
+  width: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, .2);
+  // position: absolute;
+  // padding-top: 10%;
+  // padding-right: 10%;
+  // position: absolute;
 }
 
 .logo {
-    color: #FFFF64;
+    // color: #FFFF64;
+    color: white;
     text-shadow: -2px 3px black;
     font-weight: bold;
     font-size: 23px;
     letter-spacing: 7px;
-    position: absolute;
-    left: 45%;
+    font-size: 30px;
+    padding: 10% 0 0 10%;
+    // position: absolute;
+    // margin-left: 50%;
+    // left: 45%;
+    // right: 50%;
+    // padding-left: 50%
+}
+
+.logo:hover {
+  color: #FFFF64;
 }
 
 .searchbar {
@@ -30,10 +59,15 @@
   font-size: .75em;
   cursor: pointer;
   display: flex;
+  margin-right: 3%;
 }
 
 .login-signup > a {
   text-decoration: none;
+}
+.login-signup > button {
+  text-decoration: none;
+  padding-top: 15%;
 }
 
 .logo {
@@ -47,10 +81,11 @@ button {
      cursor: pointer;
      font-size: 13px;
      border-bottom: 7px solid transparent;
+     color: white;
 }
 
 button:hover {
-  border-bottom: 7px solid #ff1464;
+  border-bottom: 2px solid #ff1464;
   transition-property: border-bottom;
   transition-duration: 0.1s;
   transition-timing-function: initial;
@@ -60,6 +95,7 @@ button:hover {
 .header-name {
   padding-left: 10px;
   padding-top: 5px;
+  color: white;
 }
 
 .header-button {

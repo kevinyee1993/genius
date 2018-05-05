@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '../navbar/navbar';
 
 class TrackIndex extends React.Component {
 
@@ -25,7 +26,8 @@ class TrackIndex extends React.Component {
       }
 
       return (
-        <Link to={`/tracks/${track.id}`}>
+        
+      <Link to={`/tracks/${track.id}`}>
         <section className="track-index-item">
               <p className="track-number">
                 {track.id}
@@ -49,7 +51,7 @@ class TrackIndex extends React.Component {
     });
 
     return(
-      <div>
+      <div className="bottom-section">
         <h1 className="track-index-heading"> Top Conversations </h1>
         <h1>{ tracks }</h1>
       </div>
