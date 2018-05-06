@@ -17,8 +17,11 @@ class TrackIndex extends React.Component {
 
   render() {
 
+    let trackNumber = 0;
+
     const tracks = this.props.tracks.map(track => {
       let trackImage;
+      trackNumber += 1;
       if (track.img_url) {
         trackImage = track.img_url;
       } else {
@@ -26,11 +29,11 @@ class TrackIndex extends React.Component {
       }
 
       return (
-        
+
       <Link to={`/tracks/${track.id}`}>
         <section className="track-index-item">
               <p className="track-number">
-                {track.id}
+                {trackNumber}
               </p>
 
               <img src={ trackImage }></img>
