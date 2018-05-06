@@ -15,6 +15,8 @@ import CommentIndexContainer from './comment_index_container';
 
 import GreetingContainer from '../greeting/greeting_container';
 
+import MusicPlayerContainer from '../musicplayer/music_player_container';
+
 //test code here
 import CreateAnnotationFormContainer from '../annotations/create_annotation_form_container';
 //end test code
@@ -83,12 +85,14 @@ class TrackShow extends React.Component {
     return(
       <div>
 
+
         <header className="main-header-show">
 
 
 
           <Link to={`/`}>
             <p className="logo">LYRICS</p>
+            <MusicPlayerContainer />
           </Link>
 
 
