@@ -92,7 +92,6 @@ class TrackShow extends React.Component {
 
           <Link to={`/`}>
             <p className="logo">LYRICS</p>
-            <MusicPlayerContainer />
           </Link>
 
 
@@ -115,6 +114,7 @@ class TrackShow extends React.Component {
             </div>
 
           </section>
+          <MusicPlayerContainer />
         </header>
 
 
