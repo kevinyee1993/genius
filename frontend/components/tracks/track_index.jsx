@@ -55,7 +55,10 @@ class TrackIndex extends React.Component {
 
     return(
       <div className="bottom-section">
-        <h1 className="track-index-heading"> Top Conversations </h1>
+        <h1 className="track-index-heading">
+          <p>Top Songs</p>
+          <div className="top-songs-border"></div>
+         </h1>
         <h1>{ tracks }</h1>
       </div>
     );
