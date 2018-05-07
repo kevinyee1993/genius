@@ -27,6 +27,8 @@ import Navbar from './navbar/navbar';
 import SplashImageIndex from './tracks/splash-index';
 import SplashImageShow from './tracks/splash-show';
 
+// import MusicPlayerContainer from './musicplayer/music_player_container';
+
 //may or may not need this depending on if you use bootstrap
 // import Slider from "react-slick";
 import Slider from './carousel';
@@ -40,7 +42,6 @@ const App = () => (
 
 
 
-    <Navbar />
 
 
     <Switch>
@@ -81,6 +82,8 @@ const App = () => (
 
           <SplashImageIndex />
           <TrackIndexContainer />
+
+          <Navbar />
         </div>
       } />
 

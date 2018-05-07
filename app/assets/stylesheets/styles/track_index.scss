@@ -22,11 +22,11 @@
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
-  border-bottom: 2px solid black;
+  // border-bottom: 2px solid black;
   margin-left: 20px;
   padding: 10px;
   padding-top: 20px;
-  width: 270px;
+  width: 153px;
   margin: 0 auto;
   margin-bottom: 20px;
 }
@@ -133,4 +133,25 @@ a:nth-child(n+4) .track-index-item .small-artist:before {
 
 .header-group {
   padding: 15px 10px 10px 10px;
+}
+
+.title-and-artist {
+  margin-left: 15px;
+  padding-top: 10px;
+}
+
+.small-title {
+  margin-bottom: 10px;
+  // padding-top: 10px;
+}
+
+.small-artist {
+  // padding-top: 10px;
+}
+
+.top-songs-border {
+  border-bottom: 3px solid #EB3966;
+  margin-top: 10px;
+  width: 40px;
+  margin-left: 35%;
 }
