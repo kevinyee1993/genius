@@ -10,11 +10,11 @@ class MusicPlayer extends React.Component {
   render() {
     // let check = this.props.track.album;
 
+    // <source src="https://res.cloudinary.com/dawsdkywh/video/upload/v1525667025/Gallant_-_Weight_In_Gold_Louis_Futon_Remix.mp3" />
     return(
       <div>
-        <h1>{ this.props.track }</h1>
         <audio controls>
-          <source src="https://res.cloudinary.com/dawsdkywh/video/upload/v1525667025/Gallant_-_Weight_In_Gold_Louis_Futon_Remix.mp3" />
+          <source src={ this.props.track } />
         </audio>
 
       </div>
