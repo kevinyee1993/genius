@@ -13,7 +13,7 @@ const mapStateToProps = (state, ownProps) => {
 
   //need to get this working, not for some reason
   // const track = state.entities.tracks[ownProps.match.params.trackId];
-  const track = state.entities.tracks[ownProps.match.params.trackId].album;
+  const track = state.entities.tracks[ownProps.match.params.trackId].song_url;
 
   // const track = state.entities.tracks[1].album;
   // const track = state.entities.annotations;

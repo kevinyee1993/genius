@@ -12,8 +12,9 @@ class MusicPlayer extends React.Component {
 
     return(
       <div>
-        <audio controls>Hello
-          <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/wwy.mp3" type="audio/mpeg" />
+        <h1>{ this.props.track }</h1>
+        <audio controls>
+          <source src="https://res.cloudinary.com/dawsdkywh/video/upload/v1525667025/Gallant_-_Weight_In_Gold_Louis_Futon_Remix.mp3" />
         </audio>
 
       </div>

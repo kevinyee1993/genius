@@ -125,3 +125,28 @@ Track.create(title: "Day at the Barbershop",
 
   img_url: "https://s-media-cache-ak0.pinimg.com/originals/24/e4/6d/24e46dcc2525934edc22851523603f8a.jpg"
 )
+
+
+Track.create(title: "Day at the Barbershop",
+
+  lyrics: "Me: Can I get a trim please \n
+  Barber: Yeah no problem I got you \n
+  [Barber shaves off all my hair] \n
+  Barber: Well what do you think? \n
+  Me holding back tears: Looks good thank you \n
+  Barber: Awesome that'll be $25 \n
+  Me: [Pays $25 but also tips for some reason] \n",
+
+  artist: "Bald Man",
+
+  album: "Never Again",
+
+#MIGHT WANNA CHANGE THIS TO User.find whatever whatever
+#User.find_by(username: "demo")
+  author_id: 4,
+
+  img_url: "https://s-media-cache-ak0.pinimg.com/originals/24/e4/6d/24e46dcc2525934edc22851523603f8a.jpg",
+
+  #HARDCODE THE SONG URL HERE
+  song_url: "",
+)
