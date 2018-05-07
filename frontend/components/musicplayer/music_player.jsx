@@ -12,7 +12,6 @@ class MusicPlayer extends React.Component {
 
     return(
       <div>
-        <h1>{ this.props.track }</h1>
         <audio controls>Hello
           <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/wwy.mp3" type="audio/mpeg" />
         </audio>
