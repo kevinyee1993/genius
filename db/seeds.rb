@@ -751,3 +751,46 @@ TrackComment.create(
   track_id: Track.find_by(title: "Good Life").id,
   author_id: User.find_by(username: "Byron").id
 )
+
+
+TrackComment.create(
+  body: "OMG I LOVE BEYONCE!!!!!",
+  track_id: Track.find_by(title: "Love on Top").id,
+  author_id: User.find_by(username: "Byron").id
+)
+
+TrackComment.create(
+  body: "beyonces ok",
+  track_id: Track.find_by(title: "Love on Top").id,
+  author_id: User.find_by(username: "Kevin").id
+)
+
+TrackComment.create(
+  body: "HOW DO YOU THINK SHE'S ONLY OK?!?!!!?!?",
+  track_id: Track.find_by(title: "Love on Top").id,
+  author_id: User.find_by(username: "Byron").id
+)
+
+TrackComment.create(
+  body: "MJ the goat",
+  track_id: Track.find_by(title: "Rock with You").id,
+  author_id: User.find_by(username: "Adam").id
+)
+
+TrackComment.create(
+  body: "one of my favorite songs of all time!!",
+  track_id: Track.find_by(title: "Rock with You").id,
+  author_id: User.find_by(username: "Curtis").id
+)
+
+TrackComment.create(
+  body: "Love the beat on this",
+  track_id: Track.find_by(title: "Gone").id,
+  author_id: User.find_by(username: "Howard").id
+)
+
+TrackComment.create(
+  body: "big fan of anderson .paak",
+  track_id: Track.find_by(title: "Gone").id,
+  author_id: User.find_by(username: "Ron").id
+)
