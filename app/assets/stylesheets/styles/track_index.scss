@@ -155,3 +155,16 @@ a:nth-child(n+4) .track-index-item .small-artist:before {
   width: 40px;
   margin-left: 35%;
 }
+
+.splash-desc {
+  position: absolute;
+  color: white;
+  text-shadow: -2px 3px black;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 5px;
+  font-size: 20px;
+  top: 100px;
+  left: 20px;
+  // padding: 10% 0 0 10%;
+}

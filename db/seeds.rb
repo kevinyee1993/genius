@@ -9,6 +9,12 @@
 User.create(username: 'demo', password: 'password')
 User.create(username: 'Kevin', password: 'password')
 User.create(username: 'Ron', password: 'password')
+User.create(username: 'Byron', password: 'password')
+User.create(username: 'Joseph', password: 'password')
+User.create(username: 'Curtis', password: 'password')
+User.create(username: 'Adam', password: 'password')
+User.create(username: 'Howard', password: 'password')
+
 
 Track.create(title: "Weight in Gold",
 
@@ -656,4 +662,92 @@ On me, on me, on me",
   img_url: "https://res.cloudinary.com/dawsdkywh/image/upload/v1525713983/My_Dear_Melancholy.jpg",
 
   song_url: "https://res.cloudinary.com/dawsdkywh/video/upload/v1525668840/The_Weeknd_-_Wasted_Times_Official_Audio.mp3"
+)
+
+
+TrackComment.create(
+  body: "Great song!",
+  track_id: Track.find_by(title: "Weight in Gold").id,
+  author_id: User.find_by(username: "Kevin").id
+)
+
+TrackComment.create(
+  body: "Don't like it.. more like weight in bronze lol",
+  track_id: Track.find_by(title: "Weight in Gold").id,
+  author_id: User.find_by(username: "Curtis").id
+)
+
+TrackComment.create(
+  body: "Awesome!",
+  track_id: Track.find_by(title: "Weight in Gold").id,
+  author_id: User.find_by(username: "Byron").id
+)
+
+TrackComment.create(
+  body: "Great looking site, whoever made this should be hired",
+  track_id: Track.find_by(title: "Weight in Gold").id,
+  author_id: User.find_by(username: "Joseph").id
+)
+
+
+
+TrackComment.create(
+  body: "anyone see drake play fortnite the other night",
+  track_id: Track.find_by(title: "God's Plan").id,
+  author_id: User.find_by(username: "Adam").id
+)
+
+TrackComment.create(
+  body: "drakes cool but he needs to chill at raptors games",
+  track_id: Track.find_by(title: "God's Plan").id,
+  author_id: User.find_by(username: "Howard").id
+)
+
+TrackComment.create(
+  body: "i love drake more than i love cardi b my name is curtis",
+  track_id: Track.find_by(title: "God's Plan").id,
+  author_id: User.find_by(username: "Curtis").id
+)
+
+
+TrackComment.create(
+  body: "i miss the old kanye",
+  track_id: Track.find_by(title: "Good Life").id,
+  author_id: User.find_by(username: "Kevin").id
+)
+
+TrackComment.create(
+  body: "straight from the go kanye",
+  track_id: Track.find_by(title: "Good Life").id,
+  author_id: User.find_by(username: "Ron").id
+)
+
+TrackComment.create(
+  body: "chop up the soul kanye",
+  track_id: Track.find_by(title: "Good Life").id,
+  author_id: User.find_by(username: "Kevin").id
+)
+
+TrackComment.create(
+  body: "set on his goals kanye",
+  track_id: Track.find_by(title: "Good Life").id,
+  author_id: User.find_by(username: "Ron").id
+)
+
+TrackComment.create(
+  body: "i hate the new kanye",
+  track_id: Track.find_by(title: "Good Life").id,
+  author_id: User.find_by(username: "Joseph").id
+)
+
+TrackComment.create(
+  body: "the bad mood kanye",
+  track_id: Track.find_by(title: "Good Life").id,
+  author_id: User.find_by(username: "Howard").id
+)
+
+TrackComment.create(
+  body: "the always rude kanye",
+  track_id: Track.find_by(title: "Good Life").id,
+  author_id: User.find_by(username: "Byron").id
 )
