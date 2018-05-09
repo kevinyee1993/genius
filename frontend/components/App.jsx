@@ -75,7 +75,9 @@ const App = () => (
             <GreetingContainer />
           </header>
 
-          <p className="splash-desc">CUSTOMIZE THIS</p>
+          <p className="splash-desc1">No more mumbling</p>
+          <p className="splash-desc2">Learn all the lyrics to your favorite songs</p>
+
 
           <SplashImageIndex />
           <TrackIndexContainer />

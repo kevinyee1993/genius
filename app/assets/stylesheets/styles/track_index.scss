@@ -156,15 +156,26 @@ a:nth-child(n+4) .track-index-item .small-artist:before {
   margin-left: 35%;
 }
 
-.splash-desc {
+.splash-desc1 {
   position: absolute;
   color: white;
-  text-shadow: -2px 3px black;
+  // text-shadow: -2px 3px black;
   font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 5px;
-  font-size: 20px;
-  top: 100px;
-  left: 20px;
+  letter-spacing: 2px;
+  font-size: 50px;
+  top: 350px;
+  left: 50px;
+  // padding: 10% 0 0 10%;
+}
+
+.splash-desc2 {
+  position: absolute;
+  color: white;
+  // text-shadow: -2px 3px black;
+  // font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 30px;
+  top: 430px;
+  left: 50px;
   // padding: 10% 0 0 10%;
 }
