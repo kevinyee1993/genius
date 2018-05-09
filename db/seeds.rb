@@ -794,3 +794,71 @@ TrackComment.create(
   track_id: Track.find_by(title: "Gone").id,
   author_id: User.find_by(username: "Ron").id
 )
+
+
+TrackComment.create(
+  body: "very chill song",
+  track_id: Track.find_by(title: "Some Time").id,
+  author_id: User.find_by(username: "Byron").id
+)
+
+
+TrackComment.create(
+  body: "i'm listening to this song on a tuesday afternoon",
+  track_id: Track.find_by(title: "Sunday Morning").id,
+  author_id: User.find_by(username: "Kevin").id
+)
+
+TrackComment.create(
+  body: "i'm listening to this song on a thursday night",
+  track_id: Track.find_by(title: "Sunday Morning").id,
+  author_id: User.find_by(username: "Adam").id
+)
+
+TrackComment.create(
+  body: "i'm listening to this song on a friday morning",
+  track_id: Track.find_by(title: "Sunday Morning").id,
+  author_id: User.find_by(username: "Howard").id
+)
+
+TrackComment.create(
+  body: "i'm listening to this song on a sunday morning",
+  track_id: Track.find_by(title: "Sunday Morning").id,
+  author_id: User.find_by(username: "Joseph").id
+)
+
+TrackComment.create(
+  body: "Kendrick killed this album!!",
+  track_id: Track.find_by(title: "The Ways").id,
+  author_id: User.find_by(username: "Curtis").id
+)
+
+TrackComment.create(
+  body: "Anyone watch the movie??",
+  track_id: Track.find_by(title: "The Ways").id,
+  author_id: User.find_by(username: "Ron").id
+)
+
+TrackComment.create(
+  body: "Yeah WAKANDA FOREVER",
+  track_id: Track.find_by(title: "The Ways").id,
+  author_id: User.find_by(username: "Adam").id
+)
+
+TrackComment.create(
+  body: "feel bad for the weeknd but sad abel is the best abel",
+  track_id: Track.find_by(title: "Wasted Times").id,
+  author_id: User.find_by(username: "Curtis").id
+)
+
+TrackComment.create(
+  body: "THE BEAT AT 2:20 FIRE EMOJI FIRE EMOJI FIRE EMOJI",
+  track_id: Track.find_by(title: "Wasted Times").id,
+  author_id: User.find_by(username: "Howard").id
+)
+
+TrackComment.create(
+  body: "skrillex cmon man thats not even fair",
+  track_id: Track.find_by(title: "Wasted Times").id,
+  author_id: User.find_by(username: "Kevin").id
+)
