@@ -9,6 +9,12 @@
 User.create(username: 'demo', password: 'password')
 User.create(username: 'Kevin', password: 'password')
 User.create(username: 'Ron', password: 'password')
+User.create(username: 'Byron', password: 'password')
+User.create(username: 'Joseph', password: 'password')
+User.create(username: 'Curtis', password: 'password')
+User.create(username: 'Adam', password: 'password')
+User.create(username: 'Howard', password: 'password')
+
 
 Track.create(title: "Weight in Gold",
 
@@ -656,4 +662,203 @@ On me, on me, on me",
   img_url: "https://res.cloudinary.com/dawsdkywh/image/upload/v1525713983/My_Dear_Melancholy.jpg",
 
   song_url: "https://res.cloudinary.com/dawsdkywh/video/upload/v1525668840/The_Weeknd_-_Wasted_Times_Official_Audio.mp3"
+)
+
+
+TrackComment.create(
+  body: "Great song!",
+  track_id: Track.find_by(title: "Weight in Gold").id,
+  author_id: User.find_by(username: "Kevin").id
+)
+
+TrackComment.create(
+  body: "Don't like it.. more like weight in bronze lol",
+  track_id: Track.find_by(title: "Weight in Gold").id,
+  author_id: User.find_by(username: "Curtis").id
+)
+
+TrackComment.create(
+  body: "Awesome!",
+  track_id: Track.find_by(title: "Weight in Gold").id,
+  author_id: User.find_by(username: "Byron").id
+)
+
+TrackComment.create(
+  body: "Great looking site, whoever made this should be hired",
+  track_id: Track.find_by(title: "Weight in Gold").id,
+  author_id: User.find_by(username: "Joseph").id
+)
+
+
+
+TrackComment.create(
+  body: "anyone see drake play fortnite the other night",
+  track_id: Track.find_by(title: "God's Plan").id,
+  author_id: User.find_by(username: "Adam").id
+)
+
+TrackComment.create(
+  body: "drakes cool but he needs to chill at raptors games",
+  track_id: Track.find_by(title: "God's Plan").id,
+  author_id: User.find_by(username: "Howard").id
+)
+
+TrackComment.create(
+  body: "i love drake more than i love cardi b my name is curtis",
+  track_id: Track.find_by(title: "God's Plan").id,
+  author_id: User.find_by(username: "Curtis").id
+)
+
+
+TrackComment.create(
+  body: "i miss the old kanye",
+  track_id: Track.find_by(title: "Good Life").id,
+  author_id: User.find_by(username: "Kevin").id
+)
+
+TrackComment.create(
+  body: "straight from the go kanye",
+  track_id: Track.find_by(title: "Good Life").id,
+  author_id: User.find_by(username: "Ron").id
+)
+
+TrackComment.create(
+  body: "chop up the soul kanye",
+  track_id: Track.find_by(title: "Good Life").id,
+  author_id: User.find_by(username: "Kevin").id
+)
+
+TrackComment.create(
+  body: "set on his goals kanye",
+  track_id: Track.find_by(title: "Good Life").id,
+  author_id: User.find_by(username: "Ron").id
+)
+
+TrackComment.create(
+  body: "i hate the new kanye",
+  track_id: Track.find_by(title: "Good Life").id,
+  author_id: User.find_by(username: "Joseph").id
+)
+
+TrackComment.create(
+  body: "the bad mood kanye",
+  track_id: Track.find_by(title: "Good Life").id,
+  author_id: User.find_by(username: "Howard").id
+)
+
+TrackComment.create(
+  body: "the always rude kanye",
+  track_id: Track.find_by(title: "Good Life").id,
+  author_id: User.find_by(username: "Byron").id
+)
+
+
+TrackComment.create(
+  body: "OMG I LOVE BEYONCE!!!!!",
+  track_id: Track.find_by(title: "Love on Top").id,
+  author_id: User.find_by(username: "Byron").id
+)
+
+TrackComment.create(
+  body: "beyonces ok",
+  track_id: Track.find_by(title: "Love on Top").id,
+  author_id: User.find_by(username: "Kevin").id
+)
+
+TrackComment.create(
+  body: "HOW DO YOU THINK SHE'S ONLY OK?!?!!!?!?",
+  track_id: Track.find_by(title: "Love on Top").id,
+  author_id: User.find_by(username: "Byron").id
+)
+
+TrackComment.create(
+  body: "MJ the goat",
+  track_id: Track.find_by(title: "Rock with You").id,
+  author_id: User.find_by(username: "Adam").id
+)
+
+TrackComment.create(
+  body: "one of my favorite songs of all time!!",
+  track_id: Track.find_by(title: "Rock with You").id,
+  author_id: User.find_by(username: "Curtis").id
+)
+
+TrackComment.create(
+  body: "Love the beat on this",
+  track_id: Track.find_by(title: "Gone").id,
+  author_id: User.find_by(username: "Howard").id
+)
+
+TrackComment.create(
+  body: "big fan of anderson .paak",
+  track_id: Track.find_by(title: "Gone").id,
+  author_id: User.find_by(username: "Ron").id
+)
+
+
+TrackComment.create(
+  body: "very chill song",
+  track_id: Track.find_by(title: "Some Time").id,
+  author_id: User.find_by(username: "Byron").id
+)
+
+
+TrackComment.create(
+  body: "i'm listening to this song on a tuesday afternoon",
+  track_id: Track.find_by(title: "Sunday Morning").id,
+  author_id: User.find_by(username: "Kevin").id
+)
+
+TrackComment.create(
+  body: "i'm listening to this song on a thursday night",
+  track_id: Track.find_by(title: "Sunday Morning").id,
+  author_id: User.find_by(username: "Adam").id
+)
+
+TrackComment.create(
+  body: "i'm listening to this song on a friday morning",
+  track_id: Track.find_by(title: "Sunday Morning").id,
+  author_id: User.find_by(username: "Howard").id
+)
+
+TrackComment.create(
+  body: "i'm listening to this song on a sunday morning",
+  track_id: Track.find_by(title: "Sunday Morning").id,
+  author_id: User.find_by(username: "Joseph").id
+)
+
+TrackComment.create(
+  body: "Kendrick killed this album!!",
+  track_id: Track.find_by(title: "The Ways").id,
+  author_id: User.find_by(username: "Curtis").id
+)
+
+TrackComment.create(
+  body: "Anyone watch the movie??",
+  track_id: Track.find_by(title: "The Ways").id,
+  author_id: User.find_by(username: "Ron").id
+)
+
+TrackComment.create(
+  body: "Yeah WAKANDA FOREVER",
+  track_id: Track.find_by(title: "The Ways").id,
+  author_id: User.find_by(username: "Adam").id
+)
+
+TrackComment.create(
+  body: "feel bad for the weeknd but sad abel is the best abel",
+  track_id: Track.find_by(title: "Wasted Times").id,
+  author_id: User.find_by(username: "Curtis").id
+)
+
+TrackComment.create(
+  body: "THE BEAT AT 2:20 FIRE EMOJI FIRE EMOJI FIRE EMOJI",
+  track_id: Track.find_by(title: "Wasted Times").id,
+  author_id: User.find_by(username: "Howard").id
+)
+
+TrackComment.create(
+  body: "skrillex cmon man thats not even fair",
+  track_id: Track.find_by(title: "Wasted Times").id,
+  author_id: User.find_by(username: "Kevin").id
 )

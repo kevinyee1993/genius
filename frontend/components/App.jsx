@@ -39,11 +39,6 @@ const App = () => (
 
     <Modal />
 
-
-
-
-
-
     <Switch>
       <Route path="/tracks/:trackId" component={ TrackShowContainer } />
 
@@ -79,6 +74,10 @@ const App = () => (
 
             <GreetingContainer />
           </header>
+
+          <p className="splash-desc1">No more mumbling</p>
+          <p className="splash-desc2">Learn all the lyrics to your favorite songs</p>
+
 
           <SplashImageIndex />
           <TrackIndexContainer />
