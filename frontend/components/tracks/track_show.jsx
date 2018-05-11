@@ -13,6 +13,10 @@ import EditTrackLyricsContainer from './edit_track_lyrics_container';
 import EditTrackInfoContainer from './edit_track_info_container';
 import CommentIndexContainer from './comment_index_container';
 
+import GreetingContainer from '../greeting/greeting_container';
+
+import MusicPlayerContainer from '../musicplayer/music_player_container';
+
 //test code here
 import CreateAnnotationFormContainer from '../annotations/create_annotation_form_container';
 //end test code
@@ -26,6 +30,18 @@ class TrackShow extends React.Component {
   componentDidMount() {
     this.props.fetchAllTracks();
     this.props.fetchSingleTrack(this.props.match.params.trackId);
+    window.scrollTo(0, 0);
+
+
+//want to take away the class which makes its position relative and absolute
+//maybe can just make a class that adds the absolute positioning here
+//and then take it away once you go to the index page
+
+
+    // document.getElementsByClassName("heading-image").classList.add('absolute-pos');
+    // document.getElementsByClassName("heading-image").classList.add('absolute-pos');
+
+    // document.getElementByClass("MyElement").classList.remove('MyClass');
   }
   componentWillReceiveProps(nextProps) {
     if(this.props.match.params.trackId != nextProps.match.params.trackId) {
@@ -68,6 +84,21 @@ class TrackShow extends React.Component {
 
     return(
       <div>
+
+
+        <header className="main-header-show">
+
+
+
+          <Link to={`/`}>
+            <p className="logo">LYRICS</p>
+          </Link>
+
+
+          <GreetingContainer />
+        </header>
+
+        <img className="heading-image-show" src="https://images.unsplash.com/photo-1501828983797-9d7f14e0263c?ixlib=rb-0.3.5&s=3954212c2b89ef1d2825c324e08f0e44&auto=format&fit=crop&w=1350&q=80"></img>
         <header className="track-show-header" style={ style }>
           <img src={ trackImage }></img>
 
@@ -83,6 +114,7 @@ class TrackShow extends React.Component {
             </div>
 
           </section>
+          <MusicPlayerContainer />
         </header>
 
 

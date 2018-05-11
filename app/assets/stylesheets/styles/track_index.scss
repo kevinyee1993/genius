@@ -11,19 +11,24 @@
   padding-bottom: 10px;
 }
 
+
+//FIX THIS TOP!! NOT ADJUSTING CORRECTLY
 .bottom-section {
   padding: 0 100px 100px 100px;
+  position: relative;
 }
 
 .track-index-heading {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
-  border-bottom: 2px solid black;
+  // border-bottom: 2px solid black;
   margin-left: 20px;
   padding: 10px;
-  width: 270px;
+  padding-top: 20px;
+  width: 153px;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .track-index-item:hover {
@@ -98,4 +103,79 @@ a:nth-child(n+4) .track-index-item .small-title:after {
 a:nth-child(n+4) .track-index-item .small-artist:before {
   content: "y ";
   text-transform: lowercase;
+}
+
+.heading-image {
+  // width: 100%;
+  // height: 100%;
+  width: 100vw;
+  height: 100vh;
+  // height: 20%;
+  z-index: -10;
+  top: 0;
+}
+
+
+
+.heading-image-show {
+  // position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  top: 0;
+  position: absolute;
+}
+
+.extraspace {
+  // height: 200px;
+  margin-bottom: 200px;
+}
+
+.header-group {
+  padding: 15px 10px 10px 10px;
+}
+
+.title-and-artist {
+  margin-left: 15px;
+  padding-top: 10px;
+}
+
+.small-title {
+  margin-bottom: 10px;
+  // padding-top: 10px;
+}
+
+.small-artist {
+  // padding-top: 10px;
+}
+
+.top-songs-border {
+  border-bottom: 3px solid #EB3966;
+  margin-top: 10px;
+  width: 40px;
+  margin-left: 35%;
+}
+
+.splash-desc1 {
+  position: absolute;
+  color: white;
+  // text-shadow: -2px 3px black;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 50px;
+  top: 300px;
+  left: 50px;
+  // padding: 10% 0 0 10%;
+}
+
+.splash-desc2 {
+  position: absolute;
+  color: white;
+  // text-shadow: -2px 3px black;
+  // font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 30px;
+  top: 380px;
+  left: 50px;
+  // padding: 10% 0 0 10%;
 }

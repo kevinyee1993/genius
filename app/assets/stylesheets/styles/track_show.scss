@@ -50,6 +50,7 @@
 
 .track-show-edit-buttons {
   padding: 20px 10px;
+  background-color: white;
 }
 
 .track-show-edit-buttons a {
@@ -64,4 +65,10 @@
 
 .track-show-edit-buttons a:hover {
   background-color: #F5F5F5;
+}
+audio {
+  position: absolute;
+  left: 50vw;
+  padding-top: 6%;
+  width: 45%;
 }

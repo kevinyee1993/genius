@@ -23,28 +23,69 @@ import CommentIndexContainer from './tracks/comment_index_container';
 import Navbar from './navbar/navbar';
 //end of dummy components
 
+// import SplashImageIndex from './tracks/splash-index';
+import SplashImageIndex from './tracks/splash-index';
+import SplashImageShow from './tracks/splash-show';
+
+// import MusicPlayerContainer from './musicplayer/music_player_container';
+
+//may or may not need this depending on if you use bootstrap
+// import Slider from "react-slick";
+import Slider from './carousel';
+
 
 const App = () => (
   <div>
 
     <Modal />
 
-    <header className="main-header">
-
-      <Link to={`/`}>
-        <p className="logo">CONVO</p>
-      </Link>
-
-      <GreetingContainer />
-    </header>
-
-    <Navbar />
-
-    <Route exact path='/' component={ DummyStories } />
-
     <Switch>
       <Route path="/tracks/:trackId" component={ TrackShowContainer } />
-      <Route path="/" component={ TrackIndexContainer } />
+
+      <Route path="/tracks/:trackId" render={ () =>
+          <div>
+            <header className="main-header">
+
+
+
+              <Link to={`/`}>
+                <p className="logo">LYRICS</p>
+              </Link>
+
+
+              <GreetingContainer />
+            </header>
+            <SplashImageIndex />
+            <TrackShowContainer />
+          </div>
+      } />
+
+
+      <Route path="/" render={ () =>
+        <div>
+          <header className="main-header">
+
+
+
+            <Link to={`/`}>
+              <p className="logo">LYRICS</p>
+            </Link>
+
+
+            <GreetingContainer />
+          </header>
+
+          <p className="splash-desc1">No more mumbling</p>
+          <p className="splash-desc2">Learn all the lyrics to your favorite songs</p>
+
+
+          <SplashImageIndex />
+          <TrackIndexContainer />
+
+          <Navbar />
+        </div>
+      } />
+
     </Switch>
 
   </div>
